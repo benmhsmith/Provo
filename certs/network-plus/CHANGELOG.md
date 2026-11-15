@@ -1,5 +1,8 @@
 # Provo Network+ changelog
 
+## v5.3.2
+- New background: a softly faded photo of a network rack and bench (patch cables, an SFP module, a PoE injector, a switch, and a crimper) behind the page. It's tuned separately for light and dark mode so the equipment stays visible in both, stays behind the content, and adds about 16 KB.
+
 ## v5.3.1
 - Question tags are color-coded. Each kind of tag gets its own soft color (exam-style, question style, question kind, category, lab, performance-based), and no two tags in the same row share a color. Domain tags keep their domain colors, and objective tags stay neutral.
 - A faint background pattern drawn for this exam (a network topology of nodes and links) fills the page margins. It adapts to light and dark mode and never sits behind question text.

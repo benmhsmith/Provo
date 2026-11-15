@@ -4,7 +4,7 @@
 
 Provo's study lab for the **CompTIA CySA+ CS0-004** exam. It drills every exam objective, tracks what you have mastered, and finishes with timed mini-exams weighted to the official domains.
 
-**Current release:** [v1.0.1](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.1) · [All CySA+ releases](https://github.com/benmhsmith/Provo/releases?q=cysa-plus) · [What changed](CHANGELOG.md)
+**Current release:** [v1.0.2](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.2) · [All CySA+ releases](https://github.com/benmhsmith/Provo/releases?q=cysa-plus) · [What changed](CHANGELOG.md)
 
 Built from the official CompTIA CySA+ CS0-004 Exam Objectives (v2.0): 100 exam-focused acronyms, 302 terms, log-analysis and YARA labs, seven performance-based questions, a 160-question Exam-Style Drill, and 250 analyst scenarios, including the new CS0-004 topics such as reading XML and JSON logs, AI in security operations, EPSS, SBOM and SCA, STRIDE, the Pyramid of Pain, LOLBins, and business email compromise.
 
@@ -92,6 +92,10 @@ To build without releasing: `python3 certs/cysa-plus/scripts/release.py --build-
 - Microsoft Learn: Windows security auditing events and logon types · Microsoft Sysinternals Sysmon · AWS CloudTrail record contents · RFC 5424 (syslog)
 - YARA documentation (yara.readthedocs.io); PBQ matches verified against YARA 4.5
 - NIST AI Risk Management Framework (AI 100-1) · OWASP Top 10 for LLM Applications · EU AI Act
+
+## Background photo
+
+The page backdrop is an AI-generated photo of an analyst's notebook with YARA rule notes, a Zulu-time alert timeline, and a suspicious host ([assets/background.webp](assets/background.webp)), softened and faded behind the content.
 
 ---
 
