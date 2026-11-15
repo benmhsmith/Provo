@@ -101,4 +101,6 @@ The page backdrop is an AI-generated photo of an analyst's notebook with YARA ru
 
 © 2026 Benjamin Smith. All rights reserved. See [LICENSE](../../LICENSE).
 
-CompTIA and CySA+ are trademarks of CompTIA, Inc. Provo contains no CompTIA exam questions.
+CompTIA and CySA+ are trademarks of CompTIA, Inc.
+
+**No exam content.** Every Provo question is original, written from CompTIA's publicly available exam objectives. Provo does not use, buy, or accept real exam questions ("brain dumps"), and contributions are checked for this before they are added. Any resemblance to an actual exam question is unintentional. If you believe a question is too close to real exam content, [report it](https://github.com/benmhsmith/Provo/issues/new/choose) and we will review and replace it.

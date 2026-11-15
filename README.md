@@ -80,4 +80,6 @@ Copyright (c) 2026 Benjamin Smith. All rights reserved. Provo is proprietary sof
 
 Versions up to and including v4.0.0 were released under the GNU GPL v3.0 under earlier names. Third-party parts, such as the embedded fonts, keep their own licenses; see [NOTICE.md](NOTICE.md).
 
-CompTIA, Network+, Security+, A+, and CySA+ are trademarks of CompTIA, Inc. Provo contains no CompTIA exam questions.
+CompTIA, Network+, Security+, A+, and CySA+ are trademarks of CompTIA, Inc.
+
+**No exam content.** Every Provo question is original, written from CompTIA's publicly available exam objectives. Provo does not use, buy, or accept real exam questions ("brain dumps"), and contributions are checked for this before they are added. Any resemblance to an actual exam question is unintentional. If you believe a question is too close to real exam content, [report it](https://github.com/benmhsmith/Provo/issues/new/choose) and we will review and replace it.

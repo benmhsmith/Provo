@@ -51,4 +51,6 @@ Preview the layout: https://benmhsmith.github.io/Provo/a-plus-core-2/
 - [CompTIA A+ Core 2 (V15) exam page](https://www.comptia.org/en-us/certifications/a/core-2-v15/): exam details, domains, and weights
 - CompTIA A+ Core 2 220-1202 Exam Objectives: objectives 1.1 to 4.10
 
-CompTIA and A+ are trademarks of CompTIA, Inc. Provo contains no CompTIA exam questions.
+CompTIA and A+ are trademarks of CompTIA, Inc.
+
+**No exam content.** Every Provo question is original, written from CompTIA's publicly available exam objectives. Provo does not use, buy, or accept real exam questions ("brain dumps"), and contributions are checked for this before they are added. Any resemblance to an actual exam question is unintentional. If you believe a question is too close to real exam content, [report it](https://github.com/benmhsmith/Provo/issues/new/choose) and we will review and replace it.
