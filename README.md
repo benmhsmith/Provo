@@ -45,6 +45,8 @@ Each exam is released on its own, so check the **Current release** column here r
 | <img src="docs/images/provo-pbq-vlan.png" alt="VLAN and trunk troubleshooting PBQ: a switch console showing show spanning-tree output." width="420"> | <img src="docs/images/provo-pbq-cable.png" alt="Cable diagnostics PBQ: a cable tester wire map plus switch port status for one desk." width="420"> |
 | **Routing tables you build and test** | **A NOC dashboard to read like a pro** |
 | <img src="docs/images/provo-pbq-routing.png" alt="Routing PBQ: a four-router network diagram with tickets to solve." width="420"> | <img src="docs/images/provo-pbq-noc.png" alt="NOC monitoring dashboard PBQ showing wireless access point statistics." width="420"> |
+| **A+ Core 1: hardware PBQs that change every run** | **A+ Core 1: a hero for every exam** |
+| <img src="docs/images/provo-aplus1-pbq.png" alt="A+ Core 1 RAID PBQ: an array status table with one failed drive and a shelf of spares." width="420"> | <img src="docs/images/provo-aplus1-home.png" alt="A+ Core 1 home page with the motherboard header art and the domain weighting bar." width="420"> |
 | **Ranks that show what each student has mastered** | **Works on phones, light or dark** |
 | <img src="docs/images/provo-modules.png" alt="Module list with ranks from Intermediate to Pro and progress bars." width="420"> | <img src="docs/images/provo-phone-security.png" alt="Security module on a phone in dark mode, with topic progress chips and a question." width="200"> |
 
