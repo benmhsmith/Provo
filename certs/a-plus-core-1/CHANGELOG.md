@@ -1,3 +1,13 @@
 # Provo A+ Core 1 changelog
 
-No releases yet. Provo A+ Core 1 is in development.
+## v1.0.0
+- First full release of Provo A+ Core 1 for CompTIA A+ Core 1 220-1201. All 14 modules are open and cover every objective.
+- **Acronyms:** 123 exam acronyms, asked four ways, with a Type it mode.
+- **Ports & Protocols:** all 15 ports on the 220-1201 list, asked both ways with spaced repetition, plus a TCP and UDP reference.
+- **Objective modules (03 to 10):** 231 terms in 33 topics, each asked as name it, define it, and spot it in a scenario. Close neighbors such as Cat 5e, Cat 6, and Cat 6a are offered against each other. Troubleshooting problems also have a usual-fix question.
+- **Question Qualifiers:** 50 bench-tech questions, 10 each for FIRST, NEXT, BEST, MOST likely, and MINIMUM.
+- **Exam-Style Drill:** 189 original exam-style questions across all five domains and 27 skills, in four styles: best fit, scenario, exhibit, and direct. One question in four in each objective module comes from this bank.
+- **Performance-Based Questions:** seven simulations with a new variation every run: a help desk queue, two custom builds, a hardware monitor, power protection, printer service, a RAID array, and cabling and powering an access point.
+- **Mini-Exams:** 212 questions in the pool, picked in proportion to the domain weights.
+- **Cram Sheet:** ports, cables, RAID, boards and power, printers, networking, cloud, and a troubleshooting symptom map on one page.
+- Wrong answers are written about as long as the right one, so answer length doesn't give the answer away, and answer positions are shuffled every time.

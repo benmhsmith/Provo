@@ -2,7 +2,7 @@
 
 Provo's study lab for the **CompTIA Security+ SY0-701** exam. It drills every exam domain, tracks what you have mastered, and finishes with timed mini-exams weighted to the official domains.
 
-**Current release:** [v1.4.2](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.2) · [All Security+ releases](https://github.com/benmhsmith/Provo/releases?q=security-plus) · [What changed](CHANGELOG.md)
+**Current release:** [v1.4.3](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.3) · [All Security+ releases](https://github.com/benmhsmith/Provo/releases?q=security-plus) · [What changed](CHANGELOG.md)
 
 Every module covers its full objectives: 178 exam-focused acronyms, 394 terms, 336 exam-style questions (including 169 in the Exam-Style Drill), and 24 hands-on labs. Six performance-based questions generate a new variation on every run.
 
@@ -59,7 +59,7 @@ Works on Windows, Mac, Linux, Chromebooks, Android, iPhone, and iPad. Progress i
 
 ### Option 2: As a single file (works offline)
 
-1. Open the [current Security+ release](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.3.0) (v1.3.0).
+1. Open the current Security+ release (linked under **Current release** above).
 2. Download `Provo-Security-Plus-vX.Y.Z.html`.
 3. Double-click it to open it in your browser. No internet needed after that.
 

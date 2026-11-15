@@ -2,7 +2,7 @@
   "manifest_version": 1,
   "id": "io.github.provo.aplus1",
   "app_min_version": "2.12",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "name": "Provo A+ Core 1",
   "description": "Provo: exam readiness for CompTIA A+ Core 1 (220-1201). Mobile devices, networking, hardware, virtualization and cloud computing, and hardware and network troubleshooting. In development: the structure is in place and the study content is being added. To add it, choose Tools > Provo A+ Core 1 > Add Provo A+ Core 1 note.",
   "author": "Benjamin Smith",

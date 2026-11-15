@@ -1,5 +1,9 @@
 # Provo CySA+ changelog
 
+## v1.0.3
+- New background photo: the same analyst's notebook, redrawn so every note is real and readable: YARA rule notes, a Zulu-to-EST event timeline, a circled suspicious host, and an internal network trace ending in "Isolate host!"
+- Answer choices are rebalanced: the right answer is no longer usually the longest option. Wrong answers now carry the same level of detail as the right one (and some right answers were trimmed, with the detail kept in the explanation), so answer length no longer gives the answer away.
+
 ## v1.0.2
 - Joplin: notes with a ```cysa+ block now open in the full-width Provo CySA+ editor. The plugin was looking for Security+ notes instead, so CySA+ notes stayed in the regular editor, and with both plugins installed a Security+ note could open in the CySA+ editor.
 - New background: a softly faded photo of an analyst's notebook (YARA rule notes, a Zulu-time alert timeline, and a circled suspicious host) behind the page. It replaces the old line pattern, is tuned separately for light and dark mode, stays behind the content, and adds about 22 KB.
