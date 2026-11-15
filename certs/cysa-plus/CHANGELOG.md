@@ -1,5 +1,11 @@
 # Provo CySA+ changelog
 
+## v1.0.2
+- Joplin: notes with a ```cysa+ block now open in the full-width Provo CySA+ editor. The plugin was looking for Security+ notes instead, so CySA+ notes stayed in the regular editor, and with both plugins installed a Security+ note could open in the CySA+ editor.
+- New background: a softly faded photo of an analyst's notebook (YARA rule notes, a Zulu-time alert timeline, and a circled suspicious host) behind the page. It replaces the old line pattern, is tuned separately for light and dark mode, stays behind the content, and adds about 22 KB.
+- Fixed the screen-reader label on the home page's domain weight bar. It read out the Network+ domains and weights; it now reads the CySA+ ones.
+- New home-page art: the log window now shows a real XML SIEM alert for a password spray (rule, time, source IP, vulnerability, user count, action, and ticket) in place of the old gray placeholder bars. Four values light up in the domain colors: the rule (Security Operations), the vulnerability (Vulnerability Management), the source IP (Incident Response), and the ticket (Reporting and Communication).
+
 ## v1.0.1
 - The module list now matches Network+ and Security+. **Exam skills** (Question Qualifiers, Exam-Style Drill, Performance-Based Questions) is its own stage, and the Mini-Exams sit alone in a new **Test** stage, stage 6.
 - The Instructor Guide now describes the CySA+ stages. It previously repeated the Security+ text, including an out-of-date note that performance-based questions were coming soon.

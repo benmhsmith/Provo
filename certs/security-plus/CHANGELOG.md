@@ -1,5 +1,9 @@
 # Provo Security+ changelog
 
+## v1.4.2
+- New background: a softly faded photo of a security operations desk (a SIEM dashboard, a hardware security key, an RFID smart card, and an incident response binder) behind the page. It's tuned separately for light and dark mode, stays behind the content, and adds about 16 KB.
+- Fixed the screen-reader label on the home page's domain weight bar. It read out the Network+ domains and weights; it now reads the Security+ ones.
+
 ## v1.4.1
 - Question tags are color-coded. Each kind of tag gets its own soft color (exam-style, question style, question kind, category, lab, performance-based), and no two tags in the same row share a color. Domain tags keep their domain colors, and objective tags stay neutral.
 - A faint background pattern drawn for this exam (shields, padlocks, and keys) fills the page margins. It adapts to light and dark mode and never sits behind question text.

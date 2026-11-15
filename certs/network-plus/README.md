@@ -2,7 +2,7 @@
 
 Provo's study lab for the **CompTIA Network+ N10-009** exam. It drills the topics the exam weighs most, tracks what you have mastered, and finishes with timed mini-exams that include performance-based questions (PBQs).
 
-**Current release:** [v5.3.1](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.1) · [All Network+ releases](https://github.com/benmhsmith/Provo/releases?q=network-plus) · [What changed](CHANGELOG.md)
+**Current release:** [v5.3.2](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.2) · [All Network+ releases](https://github.com/benmhsmith/Provo/releases?q=network-plus) · [What changed](CHANGELOG.md)
 
 ## What's inside
 
@@ -114,6 +114,10 @@ python3 certs/network-plus/scripts/release.py 5.1.0
 This writes the `.jpl` and `.html` into `certs/network-plus/build/` and updates the website copy in `docs/network-plus/`.
 
 ---
+
+## Background photo
+
+The page backdrop is an AI-generated photo of a network rack and bench ([assets/background.webp](assets/background.webp)), edited to blur two small labels, then softened and faded behind the content.
 
 © 2026 Benjamin Smith. All rights reserved. See [LICENSE](../../LICENSE).
 
