@@ -1,5 +1,9 @@
 # Provo Network+ changelog
 
+## v5.3.3
+- New home-page art: a set of Network+ reference images that crossfade every 10 seconds. It opens on a network topology with the Provo mark (or your Mastery Badge) at its core, then shows straight-through and crossover pinouts, the OSI model, a subnetting chart (/24 to /30), key ports, the 2.4 GHz channels, and a spanning tree with root, designated, and blocked ports. With reduced motion turned on, only the first image shows.
+- Answer choices are rebalanced: the right answer is no longer usually the longest option. Wrong answers now carry the same level of detail as the right one (and some right answers were trimmed, with the detail kept in the explanation), so answer length no longer gives the answer away.
+
 ## v5.3.2
 - New background: a softly faded photo of a network rack and bench (patch cables, an SFP module, a PoE injector, a switch, and a crimper) behind the page. It's tuned separately for light and dark mode so the equipment stays visible in both, stays behind the content, and adds about 16 KB.
 

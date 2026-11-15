@@ -1,5 +1,8 @@
 # Provo Security+ changelog
 
+## v1.4.3
+- Answer choices are rebalanced: the right answer is no longer usually the longest option. Wrong answers now carry the same level of detail as the right one (and some right answers were trimmed, with the detail kept in the explanation), so answer length no longer gives the answer away.
+
 ## v1.4.2
 - New background: a softly faded photo of a security operations desk (a SIEM dashboard, a hardware security key, an RFID smart card, and an incident response binder) behind the page. It's tuned separately for light and dark mode, stays behind the content, and adds about 16 KB.
 - Fixed the screen-reader label on the home page's domain weight bar. It read out the Network+ domains and weights; it now reads the Security+ ones.

@@ -2,7 +2,7 @@
 
 Provo's study lab for the **CompTIA Network+ N10-009** exam. It drills the topics the exam weighs most, tracks what you have mastered, and finishes with timed mini-exams that include performance-based questions (PBQs).
 
-**Current release:** [v5.3.2](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.2) · [All Network+ releases](https://github.com/benmhsmith/Provo/releases?q=network-plus) · [What changed](CHANGELOG.md)
+**Current release:** [v5.3.3](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.3) · [All Network+ releases](https://github.com/benmhsmith/Provo/releases?q=network-plus) · [What changed](CHANGELOG.md)
 
 ## What's inside
 
