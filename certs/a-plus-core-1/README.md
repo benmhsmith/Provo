@@ -18,6 +18,8 @@ All 14 modules are open:
 
 Use it in your browser: https://benmhsmith.github.io/Provo/a-plus-core-1/
 
+<p><img src="../../docs/images/provo-aplus1-home.png" alt="Provo A+ Core 1 home page with the motherboard header art, the domain weighting bar, and Stage 1 modules." width="860"></p>
+
 ## Exam at a glance
 
 - Up to 90 questions in 90 minutes. Multiple choice (single and multiple response), drag and drop, and performance-based questions.
@@ -123,4 +125,6 @@ The page backdrop is an AI-generated motherboard close-up ([assets/background.we
 - [CompTIA A+ Core 1 (V15) exam page](https://www.comptia.org/en-us/certifications/a/core-1-v15/): exam details, domains, and weights
 - CompTIA A+ Core 1 220-1201 Exam Objectives: objectives 1.1 to 5.6
 
-CompTIA and A+ are trademarks of CompTIA, Inc. Provo contains no CompTIA exam questions.
+CompTIA and A+ are trademarks of CompTIA, Inc.
+
+**No exam content.** Every Provo question is original, written from CompTIA's publicly available exam objectives. Provo does not use, buy, or accept real exam questions ("brain dumps"), and contributions are checked for this before they are added. Any resemblance to an actual exam question is unintentional. If you believe a question is too close to real exam content, [report it](https://github.com/benmhsmith/Provo/issues/new/choose) and we will review and replace it.

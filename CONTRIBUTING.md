@@ -11,7 +11,7 @@ Reports and ideas are welcome from everyone. Code and content changes are accept
 
 ## Content rules
 
-1. **Original questions only.** Never copy questions from a real exam, a "brain dump", or a paid course. Sharing real exam content breaks the exam's candidate agreement and can get learners' certifications revoked.
+1. **Original questions only.** Never copy questions from a real exam, a "brain dump", or a paid course. Sharing real exam content breaks the exam's candidate agreement and can get learners' certifications revoked. Write every question from the public exam objectives. Every contribution is reviewed for this before it is added: anything that looks like it came from a real exam is rewritten from scratch or removed, even if the contributor didn't intend it. If a question already in Provo seems too close to real exam content, open an issue and it will be reviewed and replaced.
 2. **Check every fact against a primary source**: the official exam objectives, the relevant RFC or IEEE standard, or vendor documentation. Put the source in your pull request.
 3. **One defensible answer.** Every wrong option should be clearly wrong for a stated reason, and the explanation should say why the runner-up loses.
 4. **Plain language.** Short sentences, terms defined the first time they appear, no jokes that depend on insider knowledge.
