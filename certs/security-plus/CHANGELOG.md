@@ -1,5 +1,10 @@
 # Provo Security+ changelog
 
+## v1.4.4
+- Home art now rotates every 10 seconds: the security radar, then the CIA triad, symmetric and asymmetric encryption, common attacks, the incident response process, a certificate chain of trust, and zero trust.
+- Sharper background photo: upscaled from the original to 2048 pixels wide and saved at higher quality. The old version was a small, heavily compressed image that looked pixelated on large desktop screens.
+- Menu: Provo home now goes to the website's getting-started page, and a new Choose an exam item opens the exam picker.
+
 ## v1.4.3
 - Answer choices are rebalanced: the right answer is no longer usually the longest option. Wrong answers now carry the same level of detail as the right one (and some right answers were trimmed, with the detail kept in the explanation), so answer length no longer gives the answer away.
 

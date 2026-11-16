@@ -2,7 +2,7 @@
 
 Provo's study lab for the **CompTIA Network+ N10-009** exam. It drills the topics the exam weighs most, tracks what you have mastered, and finishes with timed mini-exams that include performance-based questions (PBQs).
 
-**Current release:** [v5.3.3](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.3) · [All Network+ releases](https://github.com/benmhsmith/Provo/releases?q=network-plus) · [What changed](CHANGELOG.md)
+**Current release:** [v5.3.4](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.4) · [All Network+ releases](https://github.com/benmhsmith/Provo/releases?q=network-plus) · [What changed](CHANGELOG.md)
 
 ## What's inside
 
@@ -34,13 +34,13 @@ Each module gives you a rank from Beginner to Pro based on what you have actuall
 
 ## Screenshots
 
-<p><img src="../../docs/images/provo-home.png" alt="Home page with the domain weighting bar and Stage 1 modules." width="860"></p>
+<p><img src="../../docs/images/provo-home-v2.png" alt="Home page with the domain weighting bar and Stage 1 modules." width="860"></p>
 
 | Subnetting | VLAN and trunk PBQ |
 |---|---|
-| <img src="../../docs/images/provo-subnetting.png" alt="Subnetting module asking a question about an IPv4 address and prefix." width="420"> | <img src="../../docs/images/provo-pbq-vlan.png" alt="Switch console with show spanning-tree vlan 10 output." width="420"> |
+| <img src="../../docs/images/provo-subnetting-v2.png" alt="Subnetting module asking a question about an IPv4 address and prefix." width="420"> | <img src="../../docs/images/provo-pbq-vlan-v2.png" alt="Switch console with show spanning-tree vlan 10 output." width="420"> |
 | **Cable and port diagnostics PBQ** | **Phone, dark mode** |
-| <img src="../../docs/images/provo-pbq-cable.png" alt="Cable tester wire map and switch port output for one desk." width="420"> | <img src="../../docs/images/provo-phone-home.png" alt="Home page on a phone in dark mode." width="200"> |
+| <img src="../../docs/images/provo-pbq-cable-v2.png" alt="Cable tester wire map and switch port output for one desk." width="420"> | <img src="../../docs/images/provo-phone-home-v2.png" alt="Home page on a phone in dark mode." width="200"> |
 
 ## How to use it
 

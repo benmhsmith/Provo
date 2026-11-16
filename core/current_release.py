@@ -2,7 +2,7 @@
 
 GitHub marks only one release in a repository as "Latest", so Provo shows every exam's current
 version itself: in the Exams table of the main README, on the exam's own README, and on the
-website's exam cards. Each exam's release script calls update() when it makes a new version.
+website's exam page (docs/exams/). Each exam's release script calls update() when it makes a new version.
 """
 import os
 import re
@@ -21,7 +21,7 @@ def update(repo, slug, version):
     md = re.compile(rf'\[v[0-9.]+\]\({re.escape(REPO_URL)}/releases/tag/{slug}-v[0-9.]+\)')
     htm = re.compile(rf'href="{re.escape(REPO_URL)}/releases/tag/{slug}-v[0-9.]+">v[0-9.]+<')
     changed = []
-    for rel in ['README.md', os.path.join('certs', slug, 'README.md'), os.path.join('docs', 'index.html')]:
+    for rel in ['README.md', os.path.join('certs', slug, 'README.md'), os.path.join('docs', 'index.html'), os.path.join('docs', 'exams', 'index.html')]:
         path = os.path.join(repo, rel)
         if not os.path.exists(path):
             continue
