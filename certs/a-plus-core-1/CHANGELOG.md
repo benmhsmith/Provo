@@ -1,5 +1,10 @@
 # Provo A+ Core 1 changelog
 
+## v1.0.1
+- Home art now rotates every 10 seconds: the motherboard, redrawn wide with its key parts labeled, then connectors, hard drive vs SSD vs NVMe, RAID levels, laser printing with common symptoms, a copper and fiber cable chart, and hypervisors with cloud service models.
+- Sharper background photo: upscaled from the original to 2048 pixels wide and saved at higher quality. The old version was a small, heavily compressed image that looked pixelated on large desktop screens.
+- Menu: Provo home now goes to the website's getting-started page, and a new Choose an exam item opens the exam picker.
+
 ## v1.0.0
 - First full release of Provo A+ Core 1 for CompTIA A+ Core 1 220-1201. All 14 modules are open and cover every objective.
 - **Acronyms:** 123 exam acronyms, asked four ways, with a Type it mode.

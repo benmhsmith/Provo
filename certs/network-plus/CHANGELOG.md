@@ -1,5 +1,10 @@
 # Provo Network+ changelog
 
+## v5.3.4
+- Home art: the main topology tile is animated again, with packets flowing from the Provo mark to each device, and it no longer has a window title bar.
+- Sharper background photo: upscaled from the original to 2048 pixels wide and saved at higher quality. The old version was a small, heavily compressed image that looked pixelated on large desktop screens.
+- Menu: Provo home now goes to the website's getting-started page, and a new Choose an exam item opens the exam picker.
+
 ## v5.3.3
 - New home-page art: a set of Network+ reference images that crossfade every 10 seconds. It opens on a network topology with the Provo mark (or your Mastery Badge) at its core, then shows straight-through and crossover pinouts, the OSI model, a subnetting chart (/24 to /30), key ports, the 2.4 GHz channels, and a spanning tree with root, designated, and blocked ports. With reduced motion turned on, only the first image shows.
 - Answer choices are rebalanced: the right answer is no longer usually the longest option. Wrong answers now carry the same level of detail as the right one (and some right answers were trimmed, with the detail kept in the explanation), so answer length no longer gives the answer away.
