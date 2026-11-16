@@ -68,4 +68,4 @@ jobs:
             --notes-file release-notes.md \
             --latest=false \
             "certs/a-plus-core-2/build/provo-a-plus-core-2-v$VERSION.jpl" \
-            "certs/a-plus-core-2/build/Provo-A-Plus-Core-1-v$VERSION.html"
+            "certs/a-plus-core-2/build/Provo-A-Plus-Core-2-v$VERSION.html"
