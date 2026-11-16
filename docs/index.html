@@ -32,7 +32,7 @@
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.6}
 .bar{background:var(--surface);border-bottom:1px solid var(--line)}
-.bar-in,.wrap{max-width:1000px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.bar-in,.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .bar-in{padding-block:12px;display:flex;align-items:center;gap:14px}
 .mark{width:40px;height:40px;flex:none}
 .word{display:inline-flex;flex-direction:column;gap:4px}
@@ -146,7 +146,7 @@ button.btn{font:inherit;font-weight:700;font-size:.95rem;cursor:pointer}
 /* ===== Hero band and the vendor/exam picker ===== */
 .hero{position:relative;background:#0B0D10 url(images/provo-hero.webp) center/cover no-repeat;color:#F2F4F7;isolation:isolate}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(8,10,13,.92) 0%,rgba(8,10,13,.72) 45%,rgba(8,10,13,.25) 100%)}
-.hero-in{max-width:1000px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:64px 72px;display:grid;gap:14px;justify-items:start}
+.hero-in{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:64px 72px;display:grid;gap:14px;justify-items:start}
 .hero-mark{width:96px;height:96px;filter:drop-shadow(0 8px 24px rgba(0,0,0,.5))}
 .hero .eyebrow{color:#8FB6EE}
 .hero h1{margin:0;font-size:clamp(2.1rem,6vw,3.4rem);line-height:1.08;font-weight:300;text-wrap:balance;max-width:16ch}
@@ -180,6 +180,46 @@ button.btn{font:inherit;font-weight:700;font-size:.95rem;cursor:pointer}
 .exams.empty{padding:28px 20px;border-style:dashed;background:transparent}
 .exams.empty p{margin:0;color:var(--muted)}
 .linkbtn{font:inherit;color:var(--brand);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline}
+
+/* ===== Home: getting started, what Provo is, where it runs, slideshow ===== */
+.lead{margin:0;max-width:64ch;font-size:1.08rem}
+.lead + .lead{margin-top:12px}
+.sec-sub{margin:-8px 0 18px;color:var(--muted);max-width:64ch}
+ol.steps.four{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+ol.steps a{color:var(--brand);font-weight:700}
+.rank-line{margin:16px 0 0;display:grid;gap:10px}
+.rank-line p{margin:0;color:var(--muted);font-size:.92rem}
+.where{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:16px}
+.place{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;display:grid;gap:8px;align-content:start;min-width:0}
+.place svg{width:30px;height:30px;color:var(--brand)}
+.place b{font-size:1.02rem}
+.place p{margin:0;color:var(--muted);font-size:.93rem;line-height:1.5}
+.place a{color:var(--brand);font-weight:700}
+.note-line{margin:14px 0 0;color:var(--muted);font-size:.9rem}
+.look{background:var(--surface);border-block:1px solid var(--line)}
+.look-in{max-width:1240px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:44px 48px}
+.look-in h2{max-width:1000px}
+.slides{position:relative;border:1px solid var(--line);border-radius:16px;overflow:hidden;background:var(--sunk)}
+.stage{position:relative;aspect-ratio:1800/1140;max-height:78vh;width:100%}
+.slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .6s ease,visibility 0s linear .6s}
+.slide.on{opacity:1;visibility:visible;transition:opacity .6s ease}
+.slide img{display:block;width:100%;height:100%;object-fit:contain}
+.slide.phone img{padding-block:18px;filter:drop-shadow(0 10px 28px rgba(0,0,0,.28))}
+.snav{position:absolute;top:50%;translate:0 -50%;width:44px;height:44px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);display:grid;place-items:center;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.snav svg{width:20px;height:20px}
+.snav.prev{left:12px}.snav.next{right:12px}
+.snav:focus-visible,.sdot:focus-visible,.splay:focus-visible{outline:3px solid var(--brand);outline-offset:2px}
+.scap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin-top:16px}
+.scap-t{min-width:0;flex:1 1 420px}
+.scap-t b{display:block;font-size:1.1rem}
+.scap-t span{color:var(--muted)}
+.sctl{display:flex;align-items:center;gap:10px}
+.sdots{display:flex;gap:8px}
+.sdot{width:12px;height:12px;border-radius:50%;border:2px solid var(--muted);background:transparent;padding:0;cursor:pointer}
+.sdot[aria-current="true"]{background:var(--brand);border-color:var(--brand)}
+.splay{font:inherit;font-size:.85rem;font-weight:700;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer}
+@media (max-width:560px){.snav{width:36px;height:36px}.snav.prev{left:6px}.snav.next{right:6px}}
+@media (prefers-reduced-motion: reduce){.slide,.slide.on{transition:none}}
 </style>
 </head>
 <body>
@@ -191,7 +231,8 @@ button.btn{font:inherit;font-weight:700;font-size:.95rem;cursor:pointer}
   <div class="pvmenu">
       <button class="pvmenu-btn" id="pvMenuBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="pvMenu"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Menu</span></button>
       <div class="pvmenu-panel" id="pvMenu" role="menu" hidden>
-        <a href="./" role="menuitem"><b>Provo home</b><small>All exams</small></a>
+        <a href="./" role="menuitem"><b>Provo home</b><small>Getting started and about</small></a>
+        <a href="exams/" role="menuitem"><b>Choose an exam</b><small>All exams by vendor</small></a>
         <hr>
         <button type="button" role="menuitem" data-dlg="pvContact"><b>Contact us</b><small>Questions, feedback, requests</small></button>
         <button type="button" role="menuitem" data-dlg="pvReport"><b>Report an issue</b><small>Wrong answer, typo or bug</small></button>
@@ -204,62 +245,20 @@ button.btn{font:inherit;font-weight:700;font-size:.95rem;cursor:pointer}
     <span class="eyebrow">IT certification study labs</span>
     <h1 id="heroH"><b>Practice</b> until you're exam ready</h1>
     <p class="lede">Drill what the exam tests, see what you have mastered, then prove it with timed practice exams and performance-based questions.</p>
-    <a class="btn primary" href="#pick">Choose your exam</a>
+    <a class="btn primary" href="exams/">Choose your exam</a>
   </div>
 </section>
 <div class="wrap">
 
-  <section aria-labelledby="pick" id="pick-sec">
-    <h2 id="pick">Choose your exam</h2>
-    <p class="step"><b>1</b> Pick a vendor</p>
-    <div class="vendors" role="tablist" aria-label="Certification vendors">
-      <button class="vendor" role="tab" id="v-comptia" aria-controls="p-comptia" aria-selected="true" type="button"><b>CompTIA</b><small>5 exams</small></button>
-      <button class="vendor" role="tab" id="v-cisco" aria-controls="p-cisco" aria-selected="false" tabindex="-1" type="button"><b>Cisco</b><small>Coming later</small></button>
-      <button class="vendor" role="tab" id="v-lpi" aria-controls="p-lpi" aria-selected="false" tabindex="-1" type="button"><b>LPI</b><small>Coming later</small></button>
-      <button class="vendor" role="tab" id="v-ecc" aria-controls="p-ecc" aria-selected="false" tabindex="-1" type="button"><b>EC-Council</b><small>Coming later</small></button>
-    </div>
-    <p class="step"><b>2</b> Pick an exam</p>
-    <div class="exams" role="tabpanel" id="p-comptia" aria-labelledby="v-comptia">
-      <div class="exam">
-        <div class="ex-id"><span class="dot ok" title="Available"></span><div><h3>A+ Core 1 <em>220-1201</em></h3><p>14 modules · 189 exam-style questions · 7 PBQs · hardware, mobile, networking, and troubleshooting</p></div></div>
-        <div class="ex-act"><span class="ver"><a href="https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.0">v1.0.0</a></span><a class="btn primary" href="a-plus-core-1/">Start</a><a class="btn" href="https://github.com/benmhsmith/Provo/tree/main/certs/a-plus-core-1#how-to-use-it">Download</a></div>
-      </div>
-      <div class="exam dev">
-        <div class="ex-id"><span class="dot dev" title="In development"></span><div><h3>A+ Core 2 <em>220-1202</em></h3><p>In development · operating systems, security, software troubleshooting, and operational procedures</p></div></div>
-        <div class="ex-act"><span class="ver">Coming soon</span><a class="btn" href="a-plus-core-2/">Preview</a></div>
-      </div>
-      <div class="exam">
-        <div class="ex-id"><span class="dot ok" title="Available"></span><div><h3>Network+ <em>N10-009</em></h3><p>15 modules · 136 exam-style questions · 10 PBQs · subnetting, routing and switching, and troubleshooting</p></div></div>
-        <div class="ex-act"><span class="ver"><a href="https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.3">v5.3.3</a></span><a class="btn primary" href="network-plus/">Start</a><a class="btn" href="https://github.com/benmhsmith/Provo/tree/main/certs/network-plus#how-to-use-it">Download</a></div>
-      </div>
-      <div class="exam">
-        <div class="ex-id"><span class="dot ok" title="Available"></span><div><h3>Security+ <em>SY0-701</em></h3><p>14 modules · 169 exam-style questions · 6 PBQs · 24 hands-on labs</p></div></div>
-        <div class="ex-act"><span class="ver"><a href="https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.3">v1.4.3</a></span><a class="btn primary" href="security-plus/">Start</a><a class="btn" href="https://github.com/benmhsmith/Provo/tree/main/certs/security-plus#how-to-use-it">Download</a></div>
-      </div>
-      <div class="exam">
-        <div class="ex-id"><span class="dot ok" title="Available"></span><div><h3>CySA+ <em>CS0-004</em></h3><p>18 modules · 160 exam-style questions · 7 PBQs · log-reading, YARA, and Zulu-time labs</p></div></div>
-        <div class="ex-act"><span class="ver"><a href="https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.3">v1.0.3</a></span><a class="btn primary" href="cysa-plus/">Start</a><a class="btn" href="https://github.com/benmhsmith/Provo/tree/main/certs/cysa-plus#how-to-use-it">Download</a></div>
-      </div>
-    </div>
-    <div class="exams empty" role="tabpanel" id="p-cisco" aria-labelledby="v-cisco" hidden><p><b>Cisco exams are coming later.</b> Want one sooner? <button type="button" class="linkbtn" data-dlg="pvContact">Tell us which</button>.</p></div>
-    <div class="exams empty" role="tabpanel" id="p-lpi" aria-labelledby="v-lpi" hidden><p><b>Linux Professional Institute exams are coming later.</b> Want one sooner? <button type="button" class="linkbtn" data-dlg="pvContact">Tell us which</button>.</p></div>
-    <div class="exams empty" role="tabpanel" id="p-ecc" aria-labelledby="v-ecc" hidden><p><b>EC-Council exams are coming later.</b> Want one sooner? <button type="button" class="linkbtn" data-dlg="pvContact">Tell us which</button>.</p></div>
-  </section>
-
-  <section aria-labelledby="look">
-    <h2 id="look">Take a look</h2>
-    <div class="shots">
-      <figure class="shot"><img src="images/provo-pbq-vlan.png" alt="Switch console showing show spanning-tree vlan 10 output in the VLAN troubleshooting PBQ." loading="lazy"><figcaption><b>Performance-based questions</b><span>Run show commands on switches, read the output, and find the fault.</span></figcaption></figure>
-      <figure class="shot"><img src="images/provo-pbq-cable.png" alt="Cable tester wire map and switch port output for one desk in the cable diagnostics PBQ." loading="lazy"><figcaption><b>Real troubleshooting evidence</b><span>Wire maps, port counters, and ipconfig output, just like on the job.</span></figcaption></figure>
-      <figure class="shot"><img src="images/provo-subnetting.png" alt="Subnetting module asking a question about an IPv4 address and prefix." loading="lazy"><figcaption><b>Drills that build speed</b><span>Unlimited subnetting, ports, acronyms, and more, with a walkthrough for every answer.</span></figcaption></figure>
-      <figure class="shot"><img src="images/provo-aplus1-pbq.png" alt="A+ Core 1 RAID PBQ: an array status table with one failed drive and a shelf of spares." loading="lazy"><figcaption><b>Hardware PBQs for A+</b><span>Design and repair a RAID array, spec custom builds, read a hardware monitor, and more, with a new variation every run.</span></figcaption></figure>
-      <figure class="shot"><img src="images/provo-modules.png" alt="Module list with ranks from Intermediate to Pro and progress bars." loading="lazy"><figcaption><b>Ranks you earn</b><span>Each module ranks you by what you have mastered, not by one lucky run.</span></figcaption></figure>
-      <figure class="shot phone"><img src="images/provo-phone-security.png" alt="Security module question on a phone in dark mode." loading="lazy"><figcaption><b>On your phone too</b><span>Study anywhere. On iPhone, add it to your Home Screen and it opens like an app. Light and dark mode follow your device.</span></figcaption></figure>
-    </div>
-  </section>
-
-  <section aria-labelledby="ranks">
-    <h2 id="ranks">Five ranks per module</h2>
+  <section aria-labelledby="start">
+    <h2 id="start">Getting started</h2>
+    <ol class="steps four">
+      <li><b>Choose your exam</b><span>Pick a vendor, then an exam, on the <a href="exams/">exam page</a>. Start opens it right in your browser.</span></li>
+      <li><b>Work the stages in order</b><span>Vocabulary first, then core skills, troubleshooting, exam technique, and practice exams.</span></li>
+      <li><b>Earn your ranks</b><span>Every module ranks what you have mastered. Reach Expert in all of them to earn the Mastery Badge.</span></li>
+      <li><b>Prove it</b><span>Finish with timed practice exams and performance-based questions before you book the real exam.</span></li>
+    </ol>
+    <div class="rank-line"><p>Five ranks per module, from your progress bar:</p>
     <div class="ranks">
       <span class="rk r0"><svg viewBox="0 0 88 88" aria-hidden="true"><circle class="tr" cx="44" cy="44" r="30" fill="none" stroke-width="12"/><circle class="fg" cx="44" cy="44" r="30" fill="none" stroke-width="12" stroke-linecap="round" stroke-dasharray="37.7 188.5" transform="rotate(-90 44 44)"/><circle class="dot" cx="44" cy="44" r="8"/></svg>Beginner <small>under 50%</small></span>
       <span class="rk r1"><svg viewBox="0 0 88 88" aria-hidden="true"><circle class="tr" cx="44" cy="44" r="30" fill="none" stroke-width="12"/><circle class="fg" cx="44" cy="44" r="30" fill="none" stroke-width="12" stroke-linecap="round" stroke-dasharray="94.3 188.5" transform="rotate(-90 44 44)"/><circle class="dot" cx="44" cy="44" r="8"/></svg>Intermediate <small>50%+</small></span>
@@ -267,17 +266,53 @@ button.btn{font:inherit;font-weight:700;font-size:.95rem;cursor:pointer}
       <span class="rk r3"><svg viewBox="0 0 88 88" aria-hidden="true"><circle class="tr" cx="44" cy="44" r="30" fill="none" stroke-width="12"/><circle class="fg" cx="44" cy="44" r="30" fill="none" stroke-width="12" stroke-linecap="round" stroke-dasharray="150.8 188.5" transform="rotate(-90 44 44)"/><circle class="dot" cx="44" cy="44" r="8"/></svg>Expert <small>80%+</small></span>
       <span class="rk r4"><svg viewBox="0 0 88 88" aria-hidden="true"><circle cx="44" cy="44" r="30" fill="none" stroke="var(--brand)" stroke-width="12"/><circle class="dot" cx="44" cy="44" r="15"/></svg>Pro <small>100%</small></span>
     </div>
+    </div>
   </section>
 
-  <section aria-labelledby="how">
-    <h2 id="how">How it works</h2>
-    <ol class="steps">
-      <li><b>Open your exam</b><span>Runs in any browser, phone included. On iPhone, tap Share, then Add to Home Screen.</span></li>
-      <li><b>Work the stages in order</b><span>Vocabulary first, then core skills, troubleshooting, exam technique, and practice exams.</span></li>
-      <li><b>Earn your ranks</b><span>Reach Expert in every module to earn the Mastery Badge. Reach Pro to perfect a module.</span></li>
-    </ol>
+  <section aria-labelledby="what">
+    <h2 id="what">What Provo is</h2>
+    <p class="lead">Provo is a set of study labs for IT certification exams. Each exam gets its own app, built around the official exam objectives and weighted the way the exam weighs them.</p>
+    <p class="lead">You drill the acronyms and ports, work through scenario questions and exam-style questions, solve performance-based questions hands-on, and take timed practice exams. Every module tracks what you have actually mastered, not just how many questions you have answered, so you know when you are ready to book.</p>
+    <p class="lead">CompTIA A+ Core 1, Network+, Security+ and CySA+ are ready now, and A+ Core 2 is in development.</p>
   </section>
 
+  <section aria-labelledby="whereH">
+    <h2 id="whereH">Where you can use it</h2>
+    <div class="where">
+      <div class="place"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2.5" y="4" width="19" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg><b>In your browser</b><p>Open any exam in a current browser on Windows, macOS, Linux or ChromeOS. There is nothing to install and no account to make.</p></div>
+      <div class="place"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><b>On your phone</b><p>The same app, sized for touch. On iPhone, tap Share, then Add to Home Screen. On Android, choose Add to Home screen from the browser menu.</p></div>
+      <div class="place"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h5"/></svg><b>In Joplin</b><p>Add Provo to the Joplin note-taking app on desktop or Android with the plugin from <a href="https://github.com/benmhsmith/Provo/releases">Releases</a>, and study next to your notes.</p></div>
+      <div class="place"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M7 10l5 5 5-5M4 19h16"/></svg><b>Offline</b><p>Download an exam as a single web page from <a href="https://github.com/benmhsmith/Provo/releases">Releases</a> and open it with no internet connection.</p></div>
+    </div>
+    <p class="note-line">Your progress is saved in the browser or app you study in. Nothing is sent anywhere.</p>
+  </section>
+
+</div>
+
+<section class="look" aria-labelledby="look">
+  <div class="look-in">
+    <h2 id="look">Take a look</h2>
+    <div class="slides" aria-roledescription="carousel" aria-label="Provo screenshots">
+      <div class="stage">
+        <figure class="slide on" id="sl0" role="group" aria-roledescription="slide" aria-label="1 of 7: Every exam in the same layout" data-t="Every exam in the same layout" data-c="The domain weights, the stages in order, and your rank in every module, on one home screen."><img src="images/provo-home-v2.png" alt="Network+ home screen with the domain weighting bar and the module list."></figure>
+        <figure class="slide" id="sl1" role="group" aria-roledescription="slide" aria-label="2 of 7: Hardware PBQs for A+" aria-hidden="true" data-t="Hardware PBQs for A+" data-c="Design and repair a RAID array, spec custom builds, read a hardware monitor, and more, with a new variation every run."><img src="images/provo-aplus1-pbq-v2.png" alt="A+ Core 1 RAID PBQ: an array status table with one failed drive and a shelf of spares." loading="lazy"></figure>
+        <figure class="slide" id="sl2" role="group" aria-roledescription="slide" aria-label="3 of 7: Performance-based questions" aria-hidden="true" data-t="Performance-based questions" data-c="Run show commands on switches, read the output, and find the fault."><img src="images/provo-pbq-vlan-v2.png" alt="Switch console showing show spanning-tree vlan 10 output in the VLAN troubleshooting PBQ." loading="lazy"></figure>
+        <figure class="slide" id="sl3" role="group" aria-roledescription="slide" aria-label="4 of 7: Real troubleshooting evidence" aria-hidden="true" data-t="Real troubleshooting evidence" data-c="Wire maps, port counters, and ipconfig output, just like on the job."><img src="images/provo-pbq-cable-v2.png" alt="Cable tester wire map and switch port output for one desk in the cable diagnostics PBQ." loading="lazy"></figure>
+        <figure class="slide" id="sl4" role="group" aria-roledescription="slide" aria-label="5 of 7: Drills that build speed" aria-hidden="true" data-t="Drills that build speed" data-c="Unlimited subnetting, ports, acronyms, and more, with a walkthrough for every answer."><img src="images/provo-subnetting-v2.png" alt="Subnetting module asking a question about an IPv4 address and prefix." loading="lazy"></figure>
+        <figure class="slide" id="sl5" role="group" aria-roledescription="slide" aria-label="6 of 7: Ranks you earn" aria-hidden="true" data-t="Ranks you earn" data-c="Each module ranks you by what you have mastered, not by one lucky run."><img src="images/provo-modules-v2.png" alt="Module list with ranks from Intermediate to Pro and progress bars." loading="lazy"></figure>
+        <figure class="slide phone" id="sl6" role="group" aria-roledescription="slide" aria-label="7 of 7: On your phone too" aria-hidden="true" data-t="On your phone too" data-c="Study anywhere. Light and dark mode follow your device."><img src="images/provo-phone-security-v2.png" alt="Security module question on a phone in dark mode." loading="lazy"></figure>
+        <button class="snav prev" type="button" aria-label="Previous screenshot"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12.5 4.5 7 10l5.5 5.5"/></svg></button>
+        <button class="snav next" type="button" aria-label="Next screenshot"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.5 4.5 13 10l-5.5 5.5"/></svg></button>
+      </div>
+    </div>
+    <div class="scap">
+      <div class="scap-t" aria-live="polite"><b>Every exam in the same layout</b><span>The domain weights, the stages in order, and your rank in every module, on one home screen.</span></div>
+      <div class="sctl"><div class="sdots"><button class="sdot" type="button" aria-label="Show slide 1: Every exam in the same layout" aria-current="true"></button><button class="sdot" type="button" aria-label="Show slide 2: Hardware PBQs for A+"></button><button class="sdot" type="button" aria-label="Show slide 3: Performance-based questions"></button><button class="sdot" type="button" aria-label="Show slide 4: Real troubleshooting evidence"></button><button class="sdot" type="button" aria-label="Show slide 5: Drills that build speed"></button><button class="sdot" type="button" aria-label="Show slide 6: Ranks you earn"></button><button class="sdot" type="button" aria-label="Show slide 7: On your phone too"></button></div><button class="splay" type="button" aria-pressed="false">Pause</button></div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap">
   <section aria-labelledby="about" class="about" id="about-sec">
     <h2 id="about">About the creator</h2>
     <div class="about-card">
@@ -407,15 +442,25 @@ button.btn{font:inherit;font-weight:700;font-size:.95rem;cursor:pointer}
 })();
 </script>
 <script>
-/* Vendor tabs: arrow keys move between vendors; the choice is remembered in this browser only. */
+/* Screenshot slideshow: advances every 7 seconds; pauses on hover, on focus, with the Pause button, and for reduced motion. */
 (function(){
-  const tabs=[...document.querySelectorAll('.vendor')];
-  function show(t,focus){ tabs.forEach(x=>{ const on=x===t; x.setAttribute('aria-selected',on); x.tabIndex=on?0:-1; document.getElementById(x.getAttribute('aria-controls')).hidden=!on; });
-    if(focus) t.focus(); try{ localStorage.setItem('provo-vendor',t.id); }catch(e){} }
-  tabs.forEach((t,i)=>{ t.addEventListener('click',()=>show(t));
-    t.addEventListener('keydown',e=>{ const k=e.key==='ArrowRight'||e.key==='ArrowDown'?1:e.key==='ArrowLeft'||e.key==='ArrowUp'?-1:0; if(k){ e.preventDefault(); show(tabs[(i+k+tabs.length)%tabs.length],true); } }); });
-  let saved=null; try{ saved=localStorage.getItem('provo-vendor'); }catch(e){}
-  const st=saved&&document.getElementById(saved); if(st) show(st);
+  const S=[...document.querySelectorAll('.slide')], D=[...document.querySelectorAll('.sdot')], cap=document.querySelector('.scap-t'), box=document.querySelector('.slides'), play=document.querySelector('.splay');
+  if(!S.length) return;
+  let i=0, timer=null, hold=false, stopped=false;
+  try{ stopped=matchMedia('(prefers-reduced-motion: reduce)').matches; }catch(e){}
+  const go=n=>{ i=(n+S.length)%S.length; S.forEach((s,k)=>{ const on=k===i; s.classList.toggle('on',on); on?s.removeAttribute('aria-hidden'):s.setAttribute('aria-hidden','true'); });
+    D.forEach((d,k)=>d.setAttribute('aria-current',k===i)); cap.innerHTML='<b></b><span></span>'; cap.firstChild.textContent=S[i].dataset.t; cap.lastChild.textContent=S[i].dataset.c; };
+  const tick=()=>{ clearInterval(timer); timer=null; if(!stopped&&!hold) timer=setInterval(()=>go(i+1),7000); };
+  const paint=()=>{ play.textContent=stopped?'Play':'Pause'; play.setAttribute('aria-pressed',stopped); };
+  document.querySelector('.snav.prev').addEventListener('click',()=>{ go(i-1); tick(); });
+  document.querySelector('.snav.next').addEventListener('click',()=>{ go(i+1); tick(); });
+  D.forEach((d,k)=>d.addEventListener('click',()=>{ go(k); tick(); }));
+  play.addEventListener('click',()=>{ stopped=!stopped; paint(); tick(); });
+  box.addEventListener('mouseenter',()=>{ hold=true; tick(); }); box.addEventListener('mouseleave',()=>{ hold=false; tick(); });
+  box.addEventListener('focusin',()=>{ hold=true; tick(); }); box.addEventListener('focusout',()=>{ hold=false; tick(); });
+  box.addEventListener('keydown',e=>{ if(e.key==='ArrowLeft'){ go(i-1); tick(); } if(e.key==='ArrowRight'){ go(i+1); tick(); } });
+  document.addEventListener('visibilitychange',()=>{ hold=document.hidden; tick(); });
+  paint(); tick();
 })();
 </script>
 </body>
