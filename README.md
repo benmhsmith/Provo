@@ -11,9 +11,9 @@ The name "Provo" comes from the Italian verb *provare*, "to prove." *Provo* is i
 
 **[Open Provo →](https://benmhsmith.github.io/Provo/)**
 
-<p align="center"><img src="docs/images/provo-site-home.png" alt="The Provo website: a data center photo behind the Provo badge and the line Practice until you are exam ready." width="860"></p>
+<p align="center"><img src="docs/images/provo-site-home-v3.png" alt="The Provo website: a data center photo behind the Provo badge and the line Practice until you are exam ready." width="860"></p>
 
-<p align="center"><img src="docs/images/provo-site-picker.png" alt="Choose your exam: pick a vendor, then pick an exam, each with its current version and Start and Download buttons." width="860"></p>
+<p align="center"><img src="docs/images/provo-site-picker-v3.png" alt="Choose your exam: pick a vendor, then pick an exam, each with its current version and Start and Download buttons." width="860"></p>
 
 ## Who it's for
 
@@ -34,23 +34,25 @@ Each exam is released on its own, so check the **Current release** column here r
 
 | Exam | Exam code | Status | Current release | Start here |
 |---|---|---|---|---|
-| CompTIA Network+ | N10-009 | **Available** | [v5.3.4](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.4) | [Provo Network+](certs/network-plus/) |
-| CompTIA Security+ | SY0-701 | **Available** | [v1.4.4](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.4) | [Provo Security+](certs/security-plus/) |
-| CompTIA CySA+ | CS0-004 | **Available** | [v1.0.4](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.4) | [Provo CySA+](certs/cysa-plus/) |
-| CompTIA A+ Core 1 | 220-1201 | **Available** | [v1.0.1](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.1) | [Provo A+ Core 1](certs/a-plus-core-1/) |
-| CompTIA A+ Core 2 | 220-1202 | **In development** | — | [Provo A+ Core 2](certs/a-plus-core-2/) |
+| CompTIA Network+ | N10-009 | **Available** | [v5.3.5](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.5) | [Provo Network+](certs/network-plus/) |
+| CompTIA Security+ | SY0-701 | **Available** | [v1.4.5](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.5) | [Provo Security+](certs/security-plus/) |
+| CompTIA CySA+ | CS0-004 | **Available** | [v1.0.5](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.5) | [Provo CySA+](certs/cysa-plus/) |
+| CompTIA A+ Core 1 | 220-1201 | **Available** | [v1.0.2](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.2) | [Provo A+ Core 1](certs/a-plus-core-1/) |
+| CompTIA A+ Core 2 | 220-1202 | **Available** | [v1.0.0](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-2-v1.0.0) | [Provo A+ Core 2](certs/a-plus-core-2/) |
 
 ## See it in action
 
 | Hands-on PBQs with real command output | Cable tester wire maps and port diagnostics |
 |---|---|
-| <img src="docs/images/provo-pbq-vlan-v2.png" alt="VLAN and trunk troubleshooting PBQ: a switch console showing show spanning-tree output." width="420"> | <img src="docs/images/provo-pbq-cable-v2.png" alt="Cable diagnostics PBQ: a cable tester wire map plus switch port status for one desk." width="420"> |
+| <img src="docs/images/provo-pbq-vlan-v3.png" alt="VLAN and trunk troubleshooting PBQ: a switch console showing show spanning-tree output." width="420"> | <img src="docs/images/provo-pbq-cable-v3.png" alt="Cable diagnostics PBQ: a cable tester wire map plus switch port status for one desk." width="420"> |
 | **Routing tables you build and test** | **A NOC dashboard to read like a pro** |
-| <img src="docs/images/provo-pbq-routing-v2.png" alt="Routing PBQ: a four-router network diagram with tickets to solve." width="420"> | <img src="docs/images/provo-pbq-noc-v2.png" alt="NOC monitoring dashboard PBQ showing wireless access point statistics." width="420"> |
+| <img src="docs/images/provo-pbq-routing-v3.png" alt="Routing PBQ: a four-router network diagram with tickets to solve." width="420"> | <img src="docs/images/provo-pbq-noc-v3.png" alt="NOC monitoring dashboard PBQ showing wireless access point statistics." width="420"> |
 | **A+ Core 1: hardware PBQs that change every run** | **A+ Core 1: a hero for every exam** |
-| <img src="docs/images/provo-aplus1-pbq-v2.png" alt="A+ Core 1 RAID PBQ: an array status table with one failed drive and a shelf of spares." width="420"> | <img src="docs/images/provo-aplus1-home-v2.png" alt="A+ Core 1 home page with the motherboard header art and the domain weighting bar." width="420"> |
+| <img src="docs/images/provo-aplus1-pbq-v3.png" alt="A+ Core 1 RAID PBQ: an array status table with one failed drive and a shelf of spares." width="420"> | <img src="docs/images/provo-aplus1-home-v3.png" alt="A+ Core 1 home page with the motherboard header art and the domain weighting bar." width="420"> |
+| **A+ Core 2: operating systems, security, and procedures** | **A+ Core 2: a help desk queue to work** |
+| <img src="docs/images/provo-aplus2-home-v3.png" alt="A+ Core 2 home page with the command prompt header art and the domain weighting bar." width="420"> | <img src="docs/images/provo-aplus2-pbq-v3.png" alt="A+ Core 2 help desk queue PBQ: five tickets, each needing a cause and a fix." width="420"> |
 | **Ranks that show what each student has mastered** | **Works on phones, light or dark** |
-| <img src="docs/images/provo-modules-v2.png" alt="Module list with ranks from Intermediate to Pro and progress bars." width="420"> | <img src="docs/images/provo-phone-security-v2.png" alt="Security module on a phone in dark mode, with topic progress chips and a question." width="200"> |
+| <img src="docs/images/provo-modules-v3.png" alt="Module list with ranks from Intermediate to Pro and progress bars." width="420"> | <img src="docs/images/provo-phone-security-v3.png" alt="Security module on a phone in dark mode, with topic progress chips and a question." width="200"> |
 
 ## How students use it
 

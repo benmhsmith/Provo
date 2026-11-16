@@ -1,5 +1,11 @@
 # Provo Security+ changelog
 
+## v1.4.5
+- Fairer term questions: the wrong answers are now chosen to be the same kind of thing as the right one, so the answer no longer stands out. A question that would give its own answer away is skipped when the term can be asked another way.
+- Clearer wording: "What is X?" is now "Which description fits this term?", and feedback lines name each term and give its definition as a full sentence.
+- Acronyms are asked three ways instead of four. "Which acronym stands for..." was removed because the initials gave the answer away, and "What does X do?" is now "What is X?".
+- Reworded two exam-style questions that ended in a sentence fragment, and one definition that contained its own answer.
+
 ## v1.4.4
 - Home art now rotates every 10 seconds: the security radar, then the CIA triad, symmetric and asymmetric encryption, common attacks, the incident response process, a certificate chain of trust, and zero trust.
 - Sharper background photo: upscaled from the original to 2048 pixels wide and saved at higher quality. The old version was a small, heavily compressed image that looked pixelated on large desktop screens.

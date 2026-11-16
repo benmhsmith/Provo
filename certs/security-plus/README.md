@@ -2,7 +2,7 @@
 
 Provo's study lab for the **CompTIA Security+ SY0-701** exam. It drills every exam domain, tracks what you have mastered, and finishes with timed mini-exams weighted to the official domains.
 
-**Current release:** [v1.4.4](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.4) · [All Security+ releases](https://github.com/benmhsmith/Provo/releases?q=security-plus) · [What changed](CHANGELOG.md)
+**Current release:** [v1.4.5](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.5) · [All Security+ releases](https://github.com/benmhsmith/Provo/releases?q=security-plus) · [What changed](CHANGELOG.md)
 
 Every module covers its full objectives: 178 exam-focused acronyms, 394 terms, 336 exam-style questions (including 169 in the Exam-Style Drill), and 24 hands-on labs. Six performance-based questions generate a new variation on every run.
 
@@ -12,7 +12,7 @@ Every module covers its full objectives: 178 exam-focused acronyms, 394 terms, 3
 
 | Stage | Module | What you practice | Objectives |
 |---|---|---|---|
-| 1 · Foundations | 01 Acronyms | The 178 acronyms most likely on the exam, asked four ways | Acronym list |
+| 1 · Foundations | 01 Acronyms | The 178 acronyms most likely on the exam, asked three ways | Acronym list |
 | | 02 Security Controls & Concepts | Control categories and types, CIA, zero trust, deception, change management | 1.1–1.3 |
 | | 03 Cryptography & PKI | Encryption, hashing, signatures, certificates, key storage. Labs: Key Flow, Sort the cipher | 1.4 |
 | 2 · Threats & architecture | 04 Threat Actors & Vectors | Who attacks, why, and the ways in. Labs: Threat Actor Profiler, Attack Surface Map, Spot the Phish | 2.1–2.2 |
