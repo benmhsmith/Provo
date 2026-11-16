@@ -4,7 +4,7 @@
 
 Provo's study lab for the **CompTIA CySA+ CS0-004** exam. It drills every exam objective, tracks what you have mastered, and finishes with timed mini-exams weighted to the official domains.
 
-**Current release:** [v1.0.4](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.4) · [All CySA+ releases](https://github.com/benmhsmith/Provo/releases?q=cysa-plus) · [What changed](CHANGELOG.md)
+**Current release:** [v1.0.5](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.5) · [All CySA+ releases](https://github.com/benmhsmith/Provo/releases?q=cysa-plus) · [What changed](CHANGELOG.md)
 
 Built from the official CompTIA CySA+ CS0-004 Exam Objectives (v2.0): 100 exam-focused acronyms, 302 terms, log-analysis and YARA labs, seven performance-based questions, a 160-question Exam-Style Drill, and 250 analyst scenarios, including the new CS0-004 topics such as reading XML and JSON logs, AI in security operations, EPSS, SBOM and SCA, STRIDE, the Pyramid of Pain, LOLBins, and business email compromise.
 
@@ -14,7 +14,7 @@ Built from the official CompTIA CySA+ CS0-004 Exam Objectives (v2.0): 100 exam-f
 
 | Stage | Module | What you practice | Objectives |
 |---|---|---|---|
-| 1 · Foundations | 01 Acronyms | The 100 acronyms most likely on the exam, asked four ways | Acronyms |
+| 1 · Foundations | 01 Acronyms | The 100 acronyms most likely on the exam, asked three ways | Acronyms |
 | | 02 Architecture, IAM & Data | Logging, OS internals, cloud native, zero trust and SASE, PAM and secrets, data protection, OT/ICS/SCADA | 1.1 |
 | 2 · Detect & analyze | 03 Indicators of Malicious Activity | Network, host, application, cloud, identity, and email indicators, including LOLBins, impossible travel, and BEC | 1.2 |
 | | 04 Log Analysis | XML, JSON, YAML, syslog, and web logs; Windows event IDs and logon types; Zulu time and DST; true, false, and benign positives. Labs: **Log Reader** (12 logs) and **Zulu Time** | 1.1, 1.3, 2.3, 3.3 |

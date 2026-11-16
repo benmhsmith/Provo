@@ -2,15 +2,15 @@
 
 Provo's study lab for the **CompTIA A+ Core 1 (220-1201)** exam. It drills every exam domain, tracks what you have mastered, and finishes with timed mini-exams weighted to the official domains.
 
-**Current release:** [v1.0.1](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.1) · [All A+ Core 1 releases](https://github.com/benmhsmith/Provo/releases?q=a-plus-core-1) · [What changed](CHANGELOG.md)
+**Current release:** [v1.0.2](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.2) · [All A+ Core 1 releases](https://github.com/benmhsmith/Provo/releases?q=a-plus-core-1) · [What changed](CHANGELOG.md)
 
 A+ certification takes two exams. This tool covers **Core 1 (220-1201)**. [Core 2 (220-1202)](../a-plus-core-2/) has its own tool.
 
 All 14 modules are open:
 
-- **01 Acronyms:** 123 exam acronyms, asked four ways (spell it out, match the meaning, match the description, what it does), plus a Type it mode.
+- **01 Acronyms:** 123 exam acronyms, asked three ways (spell it out, match the description, what it is), plus a Type it mode.
 - **02 Ports & Protocols:** all 15 ports on the 220-1201 list, asked both ways (name to number and number to name) with spaced repetition, plus a reference with TCP and UDP and the secure and insecure pairs.
-- **03 to 10, the objective modules:** 231 terms in 33 topics. Each term is asked several ways: name it, define it, and spot it in a scenario, with close neighbors (Cat 5e, Cat 6, and Cat 6a; the RAID levels; the cloud models) offered against each other. In the two troubleshooting modules each problem also has a "usual fix" question.
+- **03 to 10, the objective modules:** 231 terms in 33 topics. Each term is asked several ways: name it, define it, and spot it in a scenario, with close neighbors (Cat 5e, Cat 6, and Cat 6a; the RAID levels; the cloud models) offered against each other. The two troubleshooting modules ask for each problem's usual fix, from its name and from a scenario.
 - **11 Question Qualifiers:** 50 bench-tech questions, 10 each for FIRST, NEXT, BEST, MOST likely, and MINIMUM, with the A+ reading of each qualifier (safety and data first, smallest option that meets every requirement).
 - **12 Exam-Style Drill:** 189 exam-style questions across all five domains and 27 skills. One question in four in modules 02 to 10 comes from this bank.
 - **13 Performance-Based Questions:** seven simulations, a new variation every run: a help desk queue, two custom builds, a hardware monitor, power protection, printer service, a RAID array, and cabling and powering an access point.

@@ -1094,7 +1094,7 @@ const BANK = [
  {id:"bp110",d:4,sk:"o9",st:"round",q:"Lawyers notify IT that an employee's email must not be deleted because of a lawsuit. What is this?",o:["A legal hold", "Chain of custody", "Data sanitization", "Acquisition"],a:0,x:"A legal hold suspends normal deletion for relevant data.",w:["", "Chain of custody tracks handling of evidence.", "That would destroy the data.", "Acquisition is collecting evidence."]},
  {id:"bp111",d:4,sk:"o10",st:"exhibit",q:"Which source would BEST confirm that this workstation actually ran the malicious file?",o:["Endpoint process logs on 10.1.4.22", "The perimeter firewall log", "The vulnerability scan report", "The DNS server's query logs"],a:0,x:"The proxy shows a download. Only the endpoint shows whether it executed.",w:["", "Shows connections, not execution.", "Shows weaknesses, not activity.", "Shows name lookups."],h:"Proxy log: 10.1.4.22 GET http://198.51.100.40/inv0ice.exe  200  1.2 MB"},
  {id:"bp112",d:4,sk:"o10",st:"round",q:"Which data source would show which internal hosts talked to an external IP and how much data moved, without full packet contents?",o:["NetFlow", "Packet capture", "Application logs", "Vulnerability scans"],a:0,x:"Flow data summarizes who talked to whom and how much.",w:["", "Captures contain full contents.", "App logs record app events.", "Scans list weaknesses."]},
- {id:"bp113",d:4,sk:"o10",st:"scenario",q:"An investigator needs the exact contents of a suspicious network session. Which source?",o:["Packet capture", "NetFlow", "Firewall logs", "Dashboards"],a:0,x:"Only full packet capture keeps payloads.",w:["", "Flow is metadata only.", "Firewall logs show allow or deny decisions.", "Dashboards summarize."]},
+ {id:"bp113",d:4,sk:"o10",st:"scenario",q:"An investigator needs the exact contents of a suspicious network session. Which source should the investigator use?",o:["Packet capture", "NetFlow", "Firewall logs", "Dashboards"],a:0,x:"Only full packet capture keeps payloads.",w:["", "Flow is metadata only.", "Firewall logs show allow or deny decisions.", "Dashboards summarize."]},
  {id:"bp114",d:4,sk:"o10",st:"round",q:"To see whether an admin account changed a security group's members at 3 AM, which source should be checked FIRST?",o:["OS or directory security logs", "NetFlow", "Packet capture from the guest Wi-Fi", "Vulnerability scan results"],a:0,x:"Account and group changes are recorded in security event logs.",w:["", "Flow doesn't record account changes.", "Unrelated network.", "Scans list weaknesses."]},
  {id:"bp115",d:5,sk:"p1",st:"round",q:"A document says, \"All company laptops must use full-disk encryption.\" It doesn't explain how to turn it on. What type of document is it?",o:["Policy (or standard)", "Procedure document", "Guideline document", "Incident playbook"],a:0,x:"It states a mandatory requirement without step-by-step instructions.",w:["", "Procedures give steps.", "Guidelines are recommendations.", "Playbooks are incident response steps."]},
  {id:"bp116",d:5,sk:"p1",st:"scenario",q:"A document walks through clicking Settings, choosing Encryption, and entering the recovery key. What is it?",o:["A procedure", "A policy", "A guideline", "An AUP"],a:0,x:"Step-by-step instructions are procedures.",w:["", "Policies state requirements.", "Guidelines are optional advice.", "The AUP covers acceptable use."]},
@@ -1102,7 +1102,7 @@ const BANK = [
  {id:"bp118",d:5,sk:"p1",st:"round",q:"The database team runs backups and applies the access controls that the business decided on. Which role do they play?",o:["Data custodian", "Data owner", "Data controller", "Data subject"],a:0,x:"Custodians carry out day-to-day protection.",w:["", "Owners decide; they don't operate.", "Controllers determine purposes of processing.", "Subjects are the individuals."]},
  {id:"bp119",d:5,sk:"p2",st:"exhibit",q:"Using this data, what is the annualized loss expectancy?",o:["$12,500", "$50,000", "$200,000", "$800,000"],a:0,x:"SLE = $200,000 x 0.25 = $50,000. ARO = 0.25. ALE = $50,000 x 0.25 = $12,500.",w:["", "That's the SLE, not the annual figure.", "That's the asset value.", "That multiplies by 4 instead of dividing."],h:"Asset value: $200,000\nExposure factor: 25%\nExpected occurrences: once every 4 years"},
  {id:"bp120",d:5,sk:"p2",st:"round",q:"A company buys cyber insurance to cover ransomware losses. Which risk response is this?",o:["Transfer", "Accept", "Avoid", "Mitigate"],a:0,x:"Insurance shifts the financial impact to another party.",w:["", "Acceptance means taking the loss.", "Avoidance means stopping the activity.", "Mitigation reduces likelihood or impact with controls."]},
- {id:"bp121",d:5,sk:"p2",st:"scenario",q:"A risky new feature isn't worth the exposure, so the company decides not to launch it at all. Which response?",o:["Avoid", "Transfer", "Accept", "Mitigate"],a:0,x:"Not doing the activity removes the risk.",w:["", "Nothing is shifted to anyone.", "They're not taking the risk.", "They're not adding controls."]},
+ {id:"bp121",d:5,sk:"p2",st:"scenario",q:"A risky new feature isn't worth the exposure, so the company decides not to launch it at all. Which risk response is this?",o:["Avoid", "Transfer", "Accept", "Mitigate"],a:0,x:"Not doing the activity removes the risk.",w:["", "Nothing is shifted to anyone.", "They're not taking the risk.", "They're not adding controls."]},
  {id:"bp122",d:5,sk:"p2",st:"round",q:"A low-impact risk would cost more to fix than it could ever lose, so management signs off on leaving it. What is this?",o:["Acceptance", "Avoidance", "Transference", "Mitigation"],a:0,x:"Formally choosing to live with a risk is acceptance.",w:["", "They're still doing the activity.", "Nobody else takes it on.", "No controls are added."]},
  {id:"bp123",d:5,sk:"p2",st:"round",q:"Where does a company track each identified risk, its owner, its rating, and its planned response?",o:["A risk register", "A CRL from the CA", "An SLA with the vendor", "A runbook for the SOC"],a:0,x:"The risk register is the central record of risks.",w:["", "A CRL lists revoked certificates.", "An SLA defines service levels.", "Runbooks hold operating steps."]},
  {id:"bp124",d:5,sk:"p3",st:"scenario",q:"A vendor promises 99.9% uptime and credits if it misses. Which agreement contains this?",o:["SLA", "NDA", "MOU", "BPA"],a:0,x:"A service level agreement defines measurable performance.",w:["", "NDAs cover confidentiality.", "MOUs are non-binding statements of intent.", "BPAs define business partnerships."]},
@@ -1187,7 +1187,7 @@ const TERMSETS = {
   {id:"c28",g:"zt",d:1,t:"Implicit trust zone",def:"A network area where devices are trusted simply because of where they are, which zero trust removes",sc:"In a traditional network, any device plugged into the internal LAN is trusted automatically. What does zero trust call such an area?",alt:["implicit trust", "implicit trust zones"]},
   {id:"c29",g:"phys",d:1,t:"Bollards",def:"Short, sturdy posts that stop vehicles from reaching a building or entrance",sc:"Steel posts are installed outside a lobby's glass front so a car cannot drive through it. What are they?",alt:["bollard"]},
   {id:"c30",g:"phys",d:1,t:"Access control vestibule",def:"A small space between two doors where only one door can open at a time, which stops tailgating",sc:"Visitors enter a small room where the outer door must close before the inner door will open. What is this?",alt:["vestibule", "mantrap"]},
-  {id:"c31",g:"phys",d:1,t:"Fencing",def:"A barrier that marks a boundary and keeps people out; tall fencing also discourages climbing",sc:"An 8-foot barrier topped with barbed wire surrounds a data center's grounds. What physical control is this?",alt:["fence"]},
+  {id:"c31",g:"phys",d:1,t:"Fencing",def:"A barrier that marks a boundary and keeps people out; a tall one also discourages climbing",sc:"An 8-foot barrier topped with barbed wire surrounds a data center's grounds. What physical control is this?",alt:["fence"]},
   {id:"c32",g:"phys",d:1,t:"Video surveillance",def:"Cameras that record and monitor an area, which both deter and detect",sc:"Cameras with motion detection record the loading dock around the clock. What physical control is this?",alt:["cctv", "cameras", "camera", "video cameras", "surveillance cameras"]},
   {id:"c33",g:"phys",d:1,t:"Security guard",def:"A person who checks identities, watches entrances, and responds to events",sc:"A person at the front desk checks every visitor's ID and escorts them inside. What physical control is this?",alt:["guard", "security guards", "guards"]},
   {id:"c34",g:"phys",d:1,t:"Access badge",def:"An ID card, often with an RFID or smart chip, that opens doors and identifies the wearer",sc:"Employees tap a card on a reader to unlock each office door. What are they using?",alt:["badge", "access card", "id badge", "badge reader", "smart card", "rfid badge", "key card"]},
@@ -1572,7 +1572,7 @@ const TERMSETS = {
 };
 
 const MODULES = [
- {id:"acro",n:"01",stage:1,name:"Acronyms",desc:"Exam acronyms, asked four different ways.",covers:"The 178 SY0-701 acronyms most likely to matter on the exam, grouped by topic. General IT terms and rarely tested acronyms from CompTIA's full list are left out."},
+ {id:"acro",n:"01",stage:1,name:"Acronyms",desc:"Exam acronyms, asked three different ways.",covers:"The 178 SY0-701 acronyms most likely to matter on the exam, grouped by topic. General IT terms and rarely tested acronyms from CompTIA's full list are left out."},
  {id:"controls",n:"02",stage:1,name:"Security Controls & Concepts",desc:"Control categories and types, CIA, zero trust, and deception.",covers:"Domain 1.0: security controls (1.1), fundamental security concepts (1.2), and change management (1.3)."},
  {id:"crypto",n:"03",stage:1,name:"Cryptography & PKI",desc:"Encryption, hashing, signatures, certificates, and key storage.",covers:"Domain 1.0: appropriate cryptographic solutions (1.4)."},
  {id:"threats",n:"04",stage:2,name:"Threat Actors & Vectors",desc:"Who attacks, why, and the ways in.",covers:"Domain 2.0: threat actors and motivations (2.1) and threat vectors and attack surfaces (2.2)."},
@@ -1946,7 +1946,7 @@ function viewHome(){
     </a>`;}).join("")}
   </div></section>`).join("")}</div>
   <p class="note" style="margin-top:14px">Progress saves in this browser only. To start over, open Progress and choose Reset all progress.</p>
-  <p class="note">Provo Security+ <span class="badge">v1.4.4</span> · © 2026 Benjamin Smith. All rights reserved.</p>`;
+  <p class="note">Provo Security+ <span class="badge">v1.4.5</span> · © 2026 Benjamin Smith. All rights reserved.</p>`;
 }
 
 /* ---- generic pool runner ---- */
@@ -2986,6 +2986,49 @@ function termGroupState(mod){ const S=TERMSETS[mod]; return S.groups.map(([g,nam
 function termMastery(mod){ const S=TERMSETS[mod]; const done=S.items.filter(x=>termMastered(mod,x.id)).length;
   const v=S.items.reduce((a,x)=>a+(termMastered(mod,x.id)?1:Math.min(Object.keys(termKeys(mod,x.id)).length,S.need)/S.need),0)/S.items.length;
   return {v,cap:`${done} of ${S.items.length} terms mastered`}; }
+/*TQ2-START*/
+/* Term-question helpers: choose distractors that are plausible for this prompt, and detect giveaways. */
+const TQ_STOP=new Set("a an the of to in on for and or with by from that this is are be it its as at not no which what who how when where why does do can should would will than then into over after before most likely best first next user users technician company wants needs new one each every all any their they your you use used using so but if has have had was were been".split(" "));
+function tqWords(s){ const o=new Set(); String(s).toLowerCase().replace(/<[^>]+>/g," ").split(/[^a-z0-9+.\/-]+/).forEach(w=>{ if(w.length<3||TQ_STOP.has(w)) return; for(const e of ["ing","ed","es","s"]){ if(w.endsWith(e)&&w.length-e.length>=4){ w=w.slice(0,-e.length); break; } } o.add(w); }); return o; }
+function tqOverlap(a,b){ let n=0; a.forEach(w=>{ if(b.has(w)) n++; }); return n; }
+function tqShape(t){ t=String(t); return /^\.[a-z0-9]+$/.test(t)?"ext":t[0]==="/"?"path":/^[a-z][a-z0-9 \/?.:-]*$/.test(t)?"cmd":"name"; }
+/* What a scenario asks for ("Which command...", "What attack is this?"): terms whose scenarios ask for the same
+   kind of thing make the fairest options for each other. Null when the question is generic ("What is this?"). */
+const TQ_GEN=new Set("this it term problem one thing these they that concept practice step principle cause issue happened happening does is should fits fit describes best setting feature option control tool type kind method technique process approach solution has".split(" "));
+const TQ_DROP=new Set("the a an of built-in linux windows macos mac router browser file explorer power client network one single simple physical".split(" "));
+function tqAsk(it){
+  if(it._ask!==undefined) return it._ask;
+  const parts=String(it.sc||"").trim().split(/(?<=[.?!])\s+/).filter(Boolean), q=parts[parts.length-1]||"";
+  const m=q.match(/\b(?:which|what)\s+(?:(?:kind|type|sort|category)s?\s+of\s+)?((?:[a-z0-9-]+\s+){0,2}?[a-z0-9-]+?)\s+(?:is|are|was|were|does|do|did|should|would|will|can|could|fits|fit|has|have|had|must|needs|describes|explains|shows|lets|keeps|makes|stops|sets|provides|prevents|covers|controls|uses|applies|checks|carries|holds|gives|handles|adds|creates|protects|removes|drives|caused|causes|occurred|happened|opens|runs|lists|tests|manages|stores|allows|blocks)\b/i);
+  let a=null;
+  if(m){ const all=m[1].toLowerCase().split(/\s+/), w=all.filter(x=>!TQ_DROP.has(x)); let n=(w.length?w:all).pop();
+    if(n.length>4&&!n.endsWith("ss")) n=n.replace(/(es|s)$/,""); a=TQ_GEN.has(n)?null:n; }
+  return it._ask=a;
+}
+/* it: the item asked about; all: allowed candidates; field: the option text ("t", "def", or "fix").
+   Candidates: this group, plus any term whose scenario asks for the same kind of thing, plus (when this group is
+   short of them) terms of the same shape from other groups. Ranked by how alike they are, with a little chance. */
+function tqPick(it,all,n,prompt,field){
+  const sh=tqShape(it.t), ak=tqAsk(it); let c=all.filter(x=>x.g===it.g);
+  if(ak) c=c.concat(all.filter(x=>x.g!==it.g&&tqAsk(x)===ak));
+  if(c.filter(x=>tqShape(x.t)===sh).length<n) c=c.concat(all.filter(x=>x.g!==it.g&&tqShape(x.t)===sh&&!c.includes(x)));
+  if(c.length<n) c=all.slice();
+  const ref=tqWords(prompt+" "+it.t+" "+it.def+(field==="fix"?" "+it.fix:""));
+  const sc=c.map(x=>({x,s:(tqShape(x.t)===sh?4:0)+(x.g===it.g?2:0)+(ak&&tqAsk(x)===ak?6:0)+Math.min(6,tqOverlap(tqWords(x.t+" "+x.def+(field==="fix"?" "+x.fix:"")),ref))*1.5+Math.random()*2.5}));
+  sc.sort((a,b)=>b.s-a.s);
+  const out=[], seen=new Set([String(it[field]).toLowerCase()]);
+  for(const o of sc){ const k=String(o.x[field]).toLowerCase(); if(seen.has(k)) continue; seen.add(k); out.push(o.x); if(out.length===n) break; }
+  return out;
+}
+/* A scenario without its closing question, so a different question can follow it. */
+function tqStem(sc){ const p=String(sc).trim().split(/(?<=[.?!])\s+/).filter(Boolean); if(p.length>1&&/\?$/.test(p[p.length-1])) p.pop(); return p.join(" "); }
+/* True when words in the prompt point at the answer and at fewer than two of the other options. */
+function tqLeak(prompt,answer,others){
+  const pw=tqWords(prompt), lw=new Set(); tqWords(answer).forEach(w=>{ if(pw.has(w)) lw.add(w); });
+  if(!lw.size) return false;
+  return others.filter(o=>tqOverlap(tqWords(o),lw)>0).length<2;
+}
+/*TQ2-END*/
 function viewTerms(mod){
   const m=M(mod), S=TERMSETS[mod], ITEMS=S.items, NEED=S.need;
   const hasFix=ITEMS.filter(x=>x.fix).length>=4;
@@ -3020,23 +3063,24 @@ function viewTerms(mod){
     <div class="q-actions" style="margin-top:14px"><button class="btn" id="tmgo">Start questions</button></div></div>`;
     $("#tmback").addEventListener("click",menu); $("#tmgo").addEventListener("click",menu);
   }
-  function distract(it,n,field){
+  function distract(it,n,field,prompt){
     const bad=new Set([it.id,...(it.avoid||[])]); ITEMS.forEach(x=>{ if((x.avoid||[]).includes(it.id)) bad.add(x.id); });
-    let pool=ITEMS.filter(x=>x.g===it.g&&!bad.has(x.id)&&x[field]);
-    if(pool.length<n){ const gi=S.groups.findIndex(x=>x[0]===it.g); for(let k=1;k<S.groups.length&&pool.length<n;k++){ const near=S.groups[(gi+k)%S.groups.length][0]; pool=pool.concat(shuffle(ITEMS.filter(x=>x.g===near&&!bad.has(x.id)&&x[field]))); } }
-    return shuffle(pool.slice(0,Math.max(n,pool.length))).slice(0,n);
+    return tqPick(it,ITEMS.filter(x=>!bad.has(x.id)&&x[field]),n,prompt||"",field);
   }
   let lastId=null;
   function build(){
     const open=ITEMS.filter(x=>!termMastered(mod,x.id)&&x.id!==lastId); const it=(open.length&&Math.random()<0.8)?pick(open):pick(ITEMS.filter(x=>x.id!==lastId));
     const have=termKeys(mod,it.id); const kinds=["name","def","scen"].concat(it.fix&&hasFix?["fix"]:[]); const fresh=kinds.filter(k=>!have[k]);
-    const kind=pick(fresh.length?fresh:kinds);
+    const tqd={}; const dOf=k=>tqd[k]||(tqd[k]=k==="def"?distract(it,3,"def",it.t):distract(it,3,"t",k==="name"?it.def:it.sc));
+    const leaky=k=>k==="name"?tqLeak(it.def,it.t,dOf(k).map(x=>x.t)):k==="def"?tqLeak(it.t,it.def,dOf(k).map(x=>x.def)):k==="scen"?(tqLeak(it.sc,it.t,dOf(k).map(x=>x.t))||(!!tqAsk(it)&&dOf(k).filter(x=>tqAsk(x)===tqAsk(it)).length<2)):k==="fix"?tqOverlap(tqWords(it.fix),tqWords(it.t))>0:false;
+    const cand=shuffle((fresh.length?fresh:kinds).slice()); const kind=cand.find(k=>!leaky(k))||cand[0];
+    const tqline=x=>`<b>${esc(x.t)}:</b> ${esc(x.def)}.`;
     const ex=`<b>${esc(it.t)}:</b> ${esc(it.def)}.`;
-    if(kind==="name"){ const d=distract(it,3,"t"); return {it,kind,cfg:{prompt:`Which term matches this description?<span style="display:block;margin-top:.4em"><b>${esc(it.def)}</b></span>`,options:[it.t,...d.map(x=>x.t)],answer:0,explain:ex,why:["",...d.map(x=>`That is ${esc(x.def.charAt(0).toLowerCase()+x.def.slice(1))}.`)]}}; }
-    if(kind==="def"){ const d=distract(it,3,"def"); return {it,kind,cfg:{prompt:`What is <b>${esc(it.t)}</b>?`,options:[it.def,...d.map(x=>x.def)],answer:0,explain:ex,why:["",...d.map(x=>`That describes <b>${esc(x.t)}</b>, not ${esc(it.t)}.`)]}}; }
-    if(kind==="scen"){ const d=distract(it,3,"t"); return {it,kind,cfg:{prompt:esc(it.sc),options:[it.t,...d.map(x=>x.t)],answer:0,explain:ex,why:["",...d.map(x=>`${esc(x.def)}. That is not what this scenario describes.`)]}}; }
-    const bad=new Set([it.id,...(it.avoid||[]),...(it.fixAvoid||[])]); const d=shuffle(ITEMS.filter(x=>x.fix&&x.fix!==it.fix&&!bad.has(x.id)&&!(x.avoid||[]).includes(it.id)&&!(x.fixAvoid||[]).includes(it.id))).slice(0,3);
-    return {it,kind,cfg:{prompt:`Which defense BEST mitigates <b>${esc(it.t)}</b>?`,options:[it.fix,...d.map(x=>x.fix)],answer:0,explain:`It is the targeted defense against ${esc(it.t)}. ${esc(it.t)}: ${esc(it.def)}.`,why:["",...d.map(x=>`That is the main defense against <b>${esc(x.t)}</b>, a different problem: ${esc(x.def.charAt(0).toLowerCase()+x.def.slice(1))}.`)]}};
+    if(kind==="name"){ const d=dOf("name"); return {it,kind,cfg:{prompt:`Which term matches this description?<span style="display:block;margin-top:.4em"><b>${esc(it.def)}</b></span>`,options:[it.t,...d.map(x=>x.t)],answer:0,explain:`<b>${esc(it.t)}:</b> ${esc(it.def)}.`,why:["",...d.map(tqline)]}}; }
+    if(kind==="def"){ const d=dOf("def"); return {it,kind,cfg:{prompt:`Which description fits this term?<span style="display:block;margin-top:.4em"><b>${esc(it.t)}</b></span>`,options:[it.def,...d.map(x=>x.def)],answer:0,explain:`<b>${esc(it.t)}:</b> ${esc(it.def)}.`,why:["",...d.map(x=>`That describes <b>${esc(x.t)}</b>.`)]}}; }
+    if(kind==="scen"){ const d=dOf("scen"); return {it,kind,cfg:{prompt:esc(it.sc),options:[it.t,...d.map(x=>x.t)],answer:0,explain:`<b>${esc(it.t)}:</b> ${esc(it.def)}.`,why:["",...d.map(tqline)]}}; }
+    const bad=new Set([it.id,...(it.avoid||[]),...(it.fixAvoid||[])]); const d=tqPick(it,ITEMS.filter(x=>x.fix&&x.fix!==it.fix&&!bad.has(x.id)&&!(x.avoid||[]).includes(it.id)&&!(x.fixAvoid||[]).includes(it.id)),3,it.t+" "+it.def,"fix");
+    return {it,kind,cfg:{prompt:`Which defense BEST mitigates this?<span style="display:block;margin-top:.4em"><b>${esc(it.t)}</b></span>`,options:[it.fix,...d.map(x=>x.fix)],answer:0,explain:`<b>${esc(it.t)}:</b> ${esc(it.def)}. The best defense: ${esc(it.fix)}.`,why:["",...d.map(x=>`That is the main defense against <b>${esc(x.t)}</b>, a different problem.`)]}};
   }
   function finish(R,before,N,again){
     curKeys=null;
@@ -3217,10 +3261,11 @@ function viewAcro(){
       if(S.t>=N) return finish();
       $("#acroprog").textContent=`Question ${S.t+1} of ${N}`;
       const it=pickItem(); const box=P.acro[it.id]||0;
-      const type=typeOnly?wpick([["which",2],["does",2],["spell",2]]):wpick([["stands",3],["which",2],["does",3],["what",2]]);
+      let type=typeOnly?wpick([["does",3],["spell",3]]):wpick([["stands",3],["does",3],["what",3]]);
+      const tqSelf=new RegExp("(^|[^A-Za-z0-9])"+String(it.a).replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"([^A-Za-z0-9+]|$)").test(it.d); if(type==="does"&&tqSelf) type=typeOnly?"spell":"what";
       const typed=typeOnly || ((type==="which"||type==="does") && Math.random()<0.4);
       const pts=typeOnly?2:1;
-      const labels={stands:"Spell it out",which:"Name the acronym",does:"Match the description",what:"What it does",spell:"Type what it stands for"};
+      const labels={stands:"Spell it out",which:"Name the acronym",does:"Match the description",what:"What it is",spell:"Type what it stands for"};
       const meta=domTag(it.dom)+`<span class="tag">${esc(it.g)}</span>${it.t===2?`<span class="tag" title="On CompTIA's acronym list but rarely tested. Does not count toward the module rank.">Also listed</span>`:""}<span class="tag">${labels[type]}</span><span class="tag" title="One dot per correct answer in a row. Strength 4 masters the acronym. A miss resets the dots, but a mastered acronym stays mastered.">Strength <span class="strength">${"●".repeat(box)}${"○".repeat(4-box)}</span></span>${acroIsMastered(it.id)?`<span class="tag" style="color:var(--green);border-color:var(--green)">Mastered</span>`:""}`;
       const cfgBase={meta,explain:explain(it),onResult:ok=>grade(it,ok),onNext:next,nextLabel:S.t+1>=N?"Finish":"Next"};
       if(type==="stands"){
@@ -3230,7 +3275,7 @@ function viewAcro(){
       }
       if(type==="what"){
         const d=distractors(it,3,"d");
-        return choiceQ(area,{...cfgBase,prompt:`What does <span class="big">${esc(acroLabel(it))}</span> do?`,options:[it.d,...d.map(x=>x.d)],answer:0,why:["",...d.map(y=>`That describes <b>${esc(y.a)}</b> (${esc(y.x)}).`)]});
+        return choiceQ(area,{...cfgBase,prompt:`What is <span class="big">${esc(acroLabel(it))}</span>?`,options:[it.d,...d.map(x=>x.d)],answer:0,why:["",...d.map(y=>`That describes <b>${esc(y.a)}</b> (${esc(y.x)}).`)]});
       }
       const prompt = type==="which"
         ? `Which acronym stands for <b>${esc(it.x)}</b>?`

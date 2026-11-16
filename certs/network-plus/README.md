@@ -2,7 +2,7 @@
 
 Provo's study lab for the **CompTIA Network+ N10-009** exam. It drills the topics the exam weighs most, tracks what you have mastered, and finishes with timed mini-exams that include performance-based questions (PBQs).
 
-**Current release:** [v5.3.4](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.4) · [All Network+ releases](https://github.com/benmhsmith/Provo/releases?q=network-plus) · [What changed](CHANGELOG.md)
+**Current release:** [v5.3.5](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.5) · [All Network+ releases](https://github.com/benmhsmith/Provo/releases?q=network-plus) · [What changed](CHANGELOG.md)
 
 ## What's inside
 
@@ -10,7 +10,7 @@ The lab has 15 modules in 5 stages. Work through them in order.
 
 | Stage | Module | What you practice |
 |---|---|---|
-| 1 · Foundations | 01 Acronyms | 104 core exam acronyms, asked four ways |
+| 1 · Foundations | 01 Acronyms | 104 core exam acronyms, asked three ways |
 | | 02 OSI Model | Devices, protocols, and data units by layer |
 | | 03 Ports & Protocols | All 20 ports on the official N10-009 list |
 | | 04 Network Concepts | Appliances, cloud, topologies, SDN, SD-WAN, and IPv6 (1.2, 1.3, 1.6, 1.8), in exam-style questions |

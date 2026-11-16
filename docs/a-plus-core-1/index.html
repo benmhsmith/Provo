@@ -1084,7 +1084,7 @@ const TERMSETS = {
   {"id": "mb30", "g": "cpu", "d": 3, "t": "Thermal paste", "def": "A compound that fills tiny gaps between the CPU and cooler so heat transfers", "sc": "After a cooler is replaced, the CPU overheats within minutes. What was MOST likely left off?", "alt": ["thermal compound"]},
   {"id": "mb31", "g": "cpu", "d": 3, "t": "Liquid cooling", "def": "Cooling that pumps liquid from a block on the CPU to a radiator with fans", "sc": "A high-end gaming PC moves CPU heat to a radiator through tubes. Which cooling method is this?"},
   {"id": "mb32", "g": "fw", "d": 3, "t": "Secure Boot", "def": "A firmware feature that lets only signed, trusted boot loaders run", "sc": "A firmware setting blocks unsigned boot code to stop bootkits. Which setting is it?"},
-  {"id": "mb33", "g": "fw", "d": 3, "t": "TPM", "def": "A chip that securely stores keys used for full-disk encryption", "sc": "Full-disk encryption won't turn on because a security chip is disabled in firmware. Which chip?", "alt": ["trusted platform module"]},
+  {"id": "mb33", "g": "fw", "d": 3, "t": "TPM", "def": "A chip that securely stores keys used for full-disk encryption", "sc": "Full-disk encryption won't turn on because a security chip is disabled in firmware. Which chip is it?", "alt": ["trusted platform module"]},
   {"id": "mb34", "g": "fw", "d": 3, "t": "Boot order", "def": "The firmware list that sets which device the PC tries to start from first", "sc": "A PC tries to boot from a USB stick before the SSD. Which firmware setting controls this?", "alt": ["boot sequence", "boot priority"]},
   {"id": "mb35", "g": "fw", "d": 3, "t": "BIOS password", "def": "A password required to change firmware settings or to start the PC", "sc": "A school wants to stop students from changing lab PCs' firmware settings. What should it set?", "alt": ["firmware password", "supervisor password", "uefi password"]},
   {"id": "mb36", "g": "fw", "d": 3, "t": "CMOS battery", "def": "The coin cell that keeps the firmware clock and settings when the PC is unplugged", "sc": "Which part keeps a desktop's clock running while it's unplugged?", "alt": ["cr2032"]}
@@ -1093,7 +1093,7 @@ const TERMSETS = {
   {"id": "pr1", "g": "setup", "d": 3, "t": "Print driver", "def": "Software that translates print jobs into the language a specific printer understands", "sc": "A new printer prints pages of random symbols. Which software is MOST likely wrong?", "alt": ["driver"]},
   {"id": "pr2", "g": "setup", "d": 3, "t": "PostScript", "def": "A page description language that keeps output identical across devices, common in design work", "sc": "A design firm needs printed pages to match exactly across printers. Which printer language should the driver use?", "alt": ["ps"]},
   {"id": "pr3", "g": "setup", "d": 3, "t": "PCL", "def": "A widely used printer command language for office laser printers", "sc": "An office laser printer's driver name ends in a three-letter printer language common on office printers. Which language is it?"},
-  {"id": "pr4", "g": "setup", "d": 3, "t": "Duplexing", "def": "Printing on both sides of the paper", "sc": "A company wants to cut paper use by printing on both sides automatically. Which setting?", "alt": ["duplex"]},
+  {"id": "pr4", "g": "setup", "d": 3, "t": "Duplexing", "def": "Printing on both sides of the paper", "sc": "A company wants to cut paper use by printing on both sides automatically. Which setting does that?", "alt": ["duplex"]},
   {"id": "pr5", "g": "setup", "d": 3, "t": "Secured print", "def": "Holding a job until the user signs in or badges at the printer", "sc": "Sensitive documents shouldn't sit in the tray until the owner arrives. Which feature fits?", "alt": ["secure print", "pull printing"]},
   {"id": "pr6", "g": "setup", "d": 3, "t": "Audit log", "def": "A record of who printed, copied, or scanned what on a device", "sc": "A manager wants to see who printed a confidential document. Which feature provides it?", "alt": ["audit logs"]},
   {"id": "pr7", "g": "setup", "d": 3, "t": "Scan to email", "def": "An MFD feature that sends scans to an address, using SMTP settings", "sc": "An MFD should send scanned pages straight to a user's inbox. Which feature, needing SMTP settings, does this?"},
@@ -1146,10 +1146,10 @@ const TERMSETS = {
   {"id": "nw5", "g": "wifi", "d": 2, "t": "Channels 1, 6, and 11", "def": "The three non-overlapping channels in the 2.4 GHz band in North America", "sc": "Three neighboring access points on 2.4 GHz should use which channels to avoid overlap?", "alt": ["1 6 11", "1, 6, 11"]},
   {"id": "nw6", "g": "wifi", "d": 2, "t": "Long-range fixed wireless", "def": "Point-to-point radio links between fixed antennas, often miles apart", "sc": "Two buildings a mile apart are linked with directional antennas instead of cable. What is this?", "alt": ["fixed wireless"]},
   {"id": "nw7", "g": "wifi", "d": 2, "t": "Licensed frequency", "def": "Radio spectrum reserved for one license holder in an area, so interference is unlikely", "sc": "A company pays the regulator for exclusive use of a frequency for its link. What kind of spectrum is this?", "alt": ["licensed"]},
-  {"id": "nw8", "g": "svc", "d": 2, "t": "Syslog server", "def": "A server that collects log messages from many devices in one place", "sc": "Every switch and firewall should send its logs to one central server. Which server role?", "alt": ["syslog"]},
+  {"id": "nw8", "g": "svc", "d": 2, "t": "Syslog server", "def": "A server that collects log messages from many devices in one place", "sc": "Every switch and firewall should send its logs to one central server. Which server role is this?", "alt": ["syslog"]},
   {"id": "nw9", "g": "svc", "d": 2, "t": "NTP server", "def": "A server that keeps device clocks synchronized", "sc": "Sign-ins fail because device clocks drift apart. Which server should every device use?", "alt": ["ntp", "time server"]},
-  {"id": "nw10", "g": "svc", "d": 2, "t": "AAA server", "def": "A server that authenticates users, authorizes access, and records activity, such as RADIUS", "sc": "Wi-Fi users sign in with their own domain accounts, checked by a central server. Which server role?", "alt": ["radius server", "radius"]},
-  {"id": "nw11", "g": "svc", "d": 2, "t": "Proxy server", "def": "A server that makes web requests on behalf of users and can filter or cache them", "sc": "All employee web traffic goes through one server that filters and caches pages. Which server role?", "alt": ["proxy"]},
+  {"id": "nw10", "g": "svc", "d": 2, "t": "AAA server", "def": "A server that authenticates users, authorizes access, and records activity, such as RADIUS", "sc": "Wi-Fi users sign in with their own domain accounts, checked by a central server. Which server role is this?", "alt": ["radius server", "radius"]},
+  {"id": "nw11", "g": "svc", "d": 2, "t": "Proxy server", "def": "A server that makes web requests on behalf of users and can filter or cache them", "sc": "All employee web traffic goes through one server that filters and caches pages. Which server role is this?", "alt": ["proxy"]},
   {"id": "nw12", "g": "svc", "d": 2, "t": "Load balancer", "def": "A device that spreads incoming traffic across several servers", "sc": "A busy website splits visitors across three identical web servers. Which device does that?"},
   {"id": "nw13", "g": "svc", "d": 2, "t": "Spam gateway", "def": "A server that filters unwanted and malicious email before it reaches users", "sc": "Junk mail should be stopped before it reaches the mail server. Which device does that?", "alt": ["spam filter"]},
   {"id": "nw14", "g": "svc", "d": 2, "t": "UTM appliance", "def": "One device that combines firewall, intrusion prevention, antivirus, and content filtering", "sc": "A small business wants one edge box for firewall, IPS, and web filtering. What should it buy?", "alt": ["utm", "unified threat management"]},
@@ -1165,7 +1165,7 @@ const TERMSETS = {
   {"id": "nw24", "g": "cfg", "d": 2, "t": "VLAN", "def": "A logical network that separates traffic on the same physical switch", "sc": "Guests and employees share one switch but must be on separate networks. What should be used?"},
   {"id": "nw25", "g": "cfg", "d": 2, "t": "VPN", "def": "An encrypted tunnel that connects a remote device to a private network over the internet", "sc": "Home workers need a secure connection into the office network. What should they use?"},
   {"id": "nw26", "g": "hw", "d": 2, "t": "Managed switch", "def": "A switch that can be configured for VLANs, port monitoring, and more", "sc": "A company wants VLANs and per-port statistics on its switches. What kind of switch does it need?"},
-  {"id": "nw27", "g": "hw", "d": 2, "t": "Unmanaged switch", "def": "A plug-and-play switch with no configuration options", "sc": "A home office needs four more wired ports and no settings at all. What kind of switch?"},
+  {"id": "nw27", "g": "hw", "d": 2, "t": "Unmanaged switch", "def": "A plug-and-play switch with no configuration options", "sc": "A home office needs four more wired ports and no settings at all. What kind of switch fits?"},
   {"id": "nw28", "g": "hw", "d": 2, "t": "PoE injector", "def": "A device that adds power to one Ethernet cable between a switch and a device", "sc": "Only one camera needs PoE, and the switch has none. What is the cheapest fix?", "alt": ["power over ethernet injector"]},
   {"id": "nw29", "g": "hw", "d": 2, "t": "Patch panel", "def": "A panel where building cable runs end, so short patch cables connect them to switches", "sc": "Cable runs from every office end at one panel in the wiring closet. What is the panel?"},
   {"id": "nw30", "g": "hw", "d": 2, "t": "Hub", "def": "An obsolete device that repeats every frame out every port", "sc": "An old device sends every frame to every port and creates collisions. What is it?"},
@@ -1173,15 +1173,15 @@ const TERMSETS = {
   {"id": "nw32", "g": "hw", "d": 2, "t": "Software-defined networking", "def": "Control of network devices from a central software controller", "sc": "A network team manages every switch's forwarding rules from one controller. Which approach is this?", "alt": ["sdn"]},
   {"id": "nw33", "g": "soho", "d": 2, "t": "APIPA", "def": "A 169.254.x.x address a device gives itself when no DHCP server answers", "sc": "A PC shows 169.254.40.12 and can't reach the network. What kind of address is it?", "alt": ["link-local"]},
   {"id": "nw34", "g": "soho", "d": 2, "t": "Private IP address", "def": "An address in 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16 that isn't routed on the internet", "sc": "What kind of address is 192.168.1.50?", "alt": ["private address"]},
-  {"id": "nw35", "g": "soho", "d": 2, "t": "Default gateway", "def": "The router address a host sends traffic to for other networks", "sc": "A PC reaches local devices but not the internet, and one setting points to a router on another subnet. Which setting?", "alt": ["gateway"]},
-  {"id": "nw36", "g": "soho", "d": 2, "t": "Port forwarding", "def": "A router rule that sends inbound traffic on a port to one inside device", "sc": "A game console must accept connections from the internet on one port. Which router setting?"},
+  {"id": "nw35", "g": "soho", "d": 2, "t": "Default gateway", "def": "The router address a host sends traffic to for other networks", "sc": "A PC reaches local devices but not the internet, and one setting points to a router on another subnet. Which setting is wrong?", "alt": ["gateway"]},
+  {"id": "nw36", "g": "soho", "d": 2, "t": "Port forwarding", "def": "A router rule that sends inbound traffic on a port to one inside device", "sc": "A game console must accept connections from the internet on one port. Which router setting does that?"},
   {"id": "nw37", "g": "soho", "d": 2, "t": "NAT", "def": "Translation that lets many private addresses share one public address", "sc": "Ten home devices browse the internet through one public IP. What does the router use?", "alt": ["network address translation"]},
   {"id": "nw38", "g": "types", "d": 2, "t": "Satellite", "def": "Internet service from orbiting satellites, available almost anywhere but with higher latency", "sc": "A remote cabin has no cable, DSL, fiber, or cell signal. Which internet type is MOST likely available?"},
-  {"id": "nw39", "g": "types", "d": 2, "t": "Fiber", "def": "Internet over glass fiber, with the highest speeds and often equal upload and download", "sc": "A studio wants the fastest, symmetric home internet. Which connection type fits?"},
+  {"id": "nw39", "g": "types", "d": 2, "t": "Fiber", "def": "Internet delivered as light over glass strands, with the highest speeds and often equal upload and download", "sc": "A studio wants the fastest, symmetric home internet. Which connection type fits?"},
   {"id": "nw40", "g": "types", "d": 2, "t": "Cable internet", "def": "Internet carried over the cable TV provider's coaxial network", "sc": "A home's internet comes in on the same coax as TV service. Which type is it?", "alt": ["cable"]},
   {"id": "nw41", "g": "types", "d": 2, "t": "WAN", "def": "A network that connects sites across large distances", "sc": "Offices in three states are linked into one network. Which network type is this?"},
   {"id": "nw42", "g": "types", "d": 2, "t": "PAN", "def": "A network of devices around one person", "sc": "A phone, watch, and earbuds linked over Bluetooth form which network type?"},
-  {"id": "nw43", "g": "types", "d": 2, "t": "SAN", "def": "A dedicated network that gives servers block-level access to shared storage", "sc": "Servers reach a shared storage array over their own high-speed network. Which network type?"},
+  {"id": "nw43", "g": "types", "d": 2, "t": "SAN", "def": "A dedicated network that gives servers block-level access to shared storage", "sc": "Servers reach a shared storage array over their own high-speed network. Which network type is this?"},
   {"id": "nw44", "g": "tools", "d": 2, "t": "Toner probe", "def": "A tool that sends a tone down a cable so the probe can find the other end", "sc": "Which tool finds which unlabeled cable at the panel goes to office 214?", "alt": ["tone generator"]},
   {"id": "nw45", "g": "tools", "d": 2, "t": "Punchdown tool", "def": "A tool that seats wires into 110 or 66 block contacts and trims them", "sc": "Which tool terminates wires on the back of a patch panel?"},
   {"id": "nw46", "g": "tools", "d": 2, "t": "Cable tester", "def": "A tool that checks a cable's wire map for opens, shorts, and swaps", "sc": "A new patch cable doesn't work. Which tool checks each pin from end to end?"},
@@ -1191,25 +1191,25 @@ const TERMSETS = {
   {"id": "nw50", "g": "tools", "d": 2, "t": "Network tap", "def": "A device placed in a link that copies all traffic to a monitoring tool", "sc": "Security wants an exact copy of all traffic on one link for analysis. Which device fits?", "alt": ["tap"]}
  ]},
  virt:{"need": 2, "typed": true, "groups": [["virt", "Virtualization", "Virtualization"], ["cloud", "Cloud models", "Models"], ["char", "Cloud characteristics", "Characteristics"]],"items":[
-  {"id": "vc1", "g": "virt", "d": 4, "t": "Type 1 hypervisor", "def": "A hypervisor that runs directly on the hardware, with no host OS", "sc": "A data center runs VMs on a hypervisor installed straight onto the servers. Which type?", "alt": ["bare metal", "type 1"]},
+  {"id": "vc1", "g": "virt", "d": 4, "t": "Type 1 hypervisor", "def": "A hypervisor that runs directly on the hardware, with no host OS", "sc": "A data center runs VMs on a hypervisor installed straight onto the servers. Which type of hypervisor is it?", "alt": ["bare metal", "type 1"]},
   {"id": "vc2", "g": "virt", "d": 4, "t": "Type 2 hypervisor", "def": "A hypervisor that runs as an application on a host operating system", "sc": "A technician installs a VM app on their Windows laptop. Which hypervisor type is it?", "alt": ["hosted", "type 2"]},
   {"id": "vc3", "g": "virt", "d": 4, "t": "Container", "def": "A package of an app and its libraries that shares the host's OS kernel", "sc": "Developers package an app with its libraries so it starts in seconds and shares the host kernel. What is this?", "alt": ["containers"]},
   {"id": "vc4", "g": "virt", "d": 4, "t": "Sandbox", "def": "An isolated environment for running untrusted software safely", "sc": "A suspicious program is run in an isolated VM so it can't harm the laptop. What is the VM being used as?"},
   {"id": "vc5", "g": "virt", "d": 4, "t": "VDI", "def": "Desktops that run on data center servers and stream to users' devices", "sc": "Employees reach a full desktop from any device, hosted on company servers. What is this?", "alt": ["virtual desktop infrastructure"]},
   {"id": "vc6", "g": "virt", "d": 4, "t": "Snapshot", "def": "A saved point-in-time state of a VM that can be restored", "sc": "Before a risky update, a technician saves the VM's state so they can roll back. What do they take?"},
   {"id": "vc7", "g": "virt", "d": 4, "t": "Legacy software support", "def": "Running an old OS in a VM so an outdated app keeps working", "sc": "An app only runs on a 15-year-old OS, so it is kept in a VM. Which purpose of virtualization is this?", "alt": ["legacy"]},
-  {"id": "vc8", "g": "cloud", "d": 4, "t": "IaaS", "def": "Cloud servers, storage, and networking that the customer manages from the OS up", "sc": "The IT team rents cloud VMs and patches the OS themselves. Which service model?", "alt": ["infrastructure as a service"]},
-  {"id": "vc9", "g": "cloud", "d": 4, "t": "PaaS", "def": "A cloud platform where the provider runs the OS and runtime and the customer brings the code", "sc": "Developers deploy code without managing the OS or servers. Which service model?", "alt": ["platform as a service"]},
-  {"id": "vc10", "g": "cloud", "d": 4, "t": "SaaS", "def": "A finished application delivered over the internet", "sc": "A company uses web email with no servers or updates to manage. Which service model?", "alt": ["software as a service"]},
-  {"id": "vc11", "g": "cloud", "d": 4, "t": "Public cloud", "def": "Cloud infrastructure shared by many customers and run by a provider", "sc": "A startup rents servers from a provider whose cloud is open to any paying customer. Which deployment model?", "alt": ["public"]},
-  {"id": "vc12", "g": "cloud", "d": 4, "t": "Private cloud", "def": "Cloud infrastructure dedicated to one organization", "sc": "A bank runs cloud-style infrastructure used only by itself. Which deployment model?", "alt": ["private"]},
-  {"id": "vc13", "g": "cloud", "d": 4, "t": "Hybrid cloud", "def": "A mix of private and public cloud working together", "sc": "A company keeps sensitive systems in its own cloud and bursts web servers to a provider. Which model?", "alt": ["hybrid"]},
-  {"id": "vc14", "g": "cloud", "d": 4, "t": "Community cloud", "def": "Cloud infrastructure shared by several organizations with common needs", "sc": "Several hospitals share one cloud built for healthcare compliance. Which deployment model?", "alt": ["community"]},
-  {"id": "vc15", "g": "char", "d": 4, "t": "Rapid elasticity", "def": "Automatically adding and removing resources as demand changes", "sc": "A store's cloud adds servers for holiday traffic and removes them afterward. Which characteristic?", "alt": ["elasticity"]},
-  {"id": "vc16", "g": "char", "d": 4, "t": "Metered utilization", "def": "Billing based on the resources actually used", "sc": "A company is billed only for the compute hours it used this month. Which characteristic?", "alt": ["metered", "pay as you go"]},
+  {"id": "vc8", "g": "cloud", "d": 4, "t": "IaaS", "def": "Cloud servers, storage, and networking that the customer manages from the OS up", "sc": "The IT team rents cloud VMs and patches the OS themselves. Which service model is this?", "alt": ["infrastructure as a service"]},
+  {"id": "vc9", "g": "cloud", "d": 4, "t": "PaaS", "def": "A cloud platform where the provider runs the OS and runtime and the customer brings the code", "sc": "Developers deploy code without managing the OS or servers. Which service model is this?", "alt": ["platform as a service"]},
+  {"id": "vc10", "g": "cloud", "d": 4, "t": "SaaS", "def": "A finished application delivered over the internet", "sc": "A company uses web email with no servers or updates to manage. Which service model is this?", "alt": ["software as a service"]},
+  {"id": "vc11", "g": "cloud", "d": 4, "t": "Public cloud", "def": "Cloud infrastructure shared by many customers and run by a provider", "sc": "A startup rents servers from a provider whose cloud is open to any paying customer. Which deployment model is this?", "alt": ["public"]},
+  {"id": "vc12", "g": "cloud", "d": 4, "t": "Private cloud", "def": "Cloud infrastructure dedicated to one organization", "sc": "A bank runs cloud-style infrastructure used only by itself. Which deployment model is this?", "alt": ["private"]},
+  {"id": "vc13", "g": "cloud", "d": 4, "t": "Hybrid cloud", "def": "A mix of private and public cloud working together", "sc": "A company keeps sensitive systems in its own cloud and bursts web servers to a provider. Which deployment model is this?", "alt": ["hybrid"]},
+  {"id": "vc14", "g": "cloud", "d": 4, "t": "Community cloud", "def": "Cloud infrastructure shared by several organizations with common needs", "sc": "Several hospitals share one cloud built for healthcare compliance. Which deployment model is this?", "alt": ["community"]},
+  {"id": "vc15", "g": "char", "d": 4, "t": "Rapid elasticity", "def": "Automatically adding and removing resources as demand changes", "sc": "A store's cloud adds servers for holiday traffic and removes them afterward. Which cloud characteristic is this?", "alt": ["elasticity"]},
+  {"id": "vc16", "g": "char", "d": 4, "t": "Metered utilization", "def": "Billing based on the resources actually used", "sc": "A company is billed only for the compute hours it used this month. Which cloud characteristic is this?", "alt": ["metered", "pay as you go"]},
   {"id": "vc17", "g": "char", "d": 4, "t": "Multitenancy", "def": "Many customers sharing the same infrastructure with logical separation", "sc": "Unrelated companies run workloads on the same physical servers, isolated from each other. What is this?", "alt": ["shared resources"]},
-  {"id": "vc18", "g": "char", "d": 4, "t": "High availability", "def": "Designing services to stay up through failures, often across sites", "sc": "A cloud service runs in two regions so it stays online if one fails. Which characteristic?"},
-  {"id": "vc19", "g": "char", "d": 4, "t": "File synchronization", "def": "Keeping the same files up to date across all of a user's devices", "sc": "A file edited on a laptop appears updated on the user's phone a minute later. Which cloud feature?", "alt": ["file sync"]}
+  {"id": "vc18", "g": "char", "d": 4, "t": "High availability", "def": "Designing services to stay up through failures, often across sites", "sc": "A cloud service runs in two regions so it stays online if one fails. Which cloud characteristic is this?"},
+  {"id": "vc19", "g": "char", "d": 4, "t": "File synchronization", "def": "Keeping the same files up to date across all of a user's devices", "sc": "A file edited on a laptop appears updated on the user's phone a minute later. Which cloud feature is this?", "alt": ["file sync"]}
  ]},
  tshw:{"need": 2, "typed": false, "groups": [["sys", "Motherboard, RAM, CPU & power", "System"], ["drv", "Drives & RAID", "Drives"], ["disp", "Video, projectors & displays", "Displays"], ["mob", "Mobile devices", "Mobile"]], "fixQ": "What is the usual fix for", "fixCol": "Usual fix", "fixMenu": "pick the usual fix for each problem", "fixGloss": "and the usual fix","items":[
   {"id": "th1", "g": "sys", "d": 5, "t": "Dead CMOS battery", "def": "A failed coin cell, so firmware settings and the clock reset when unplugged", "sc": "Every morning a desktop's clock is wrong and its firmware settings are back to defaults. What is the cause?", "fix": "Replace the CMOS battery and re-enter firmware settings"},
@@ -1263,7 +1263,7 @@ const TERMSETS = {
 };
 
 const MODULES = [
- {id:"acro",n:"01",stage:1,name:"Acronyms",desc:"The 220-1201 acronyms most likely to matter, asked four different ways.",covers:"The exam acronyms for mobile devices, networking, hardware, virtualization and cloud, and troubleshooting."},
+ {id:"acro",n:"01",stage:1,name:"Acronyms",desc:"The 220-1201 acronyms most likely to matter, asked three different ways.",covers:"The exam acronyms for mobile devices, networking, hardware, virtualization and cloud, and troubleshooting."},
  {id:"ports",n:"02",stage:1,name:"Ports & Protocols",desc:"All 15 ports on the 220-1201 list, asked both ways, with spaced repetition.",covers:"Domain 2.0: TCP and UDP ports, protocols, and their purposes (2.1)."},
  {id:"cables",n:"03",stage:2,name:"Cables, Displays & Power",desc:"Network, peripheral, video, and storage cables and connectors; display types; and power supplies.",covers:"Domain 3.0: display components and attributes (3.1), cable types and connectors (3.2), and installing the appropriate power supply (3.6)."},
  {id:"mobo",n:"04",stage:2,name:"Motherboards, RAM & Storage",desc:"Form factors, sockets, BIOS/UEFI, CPUs, and expansion cards, plus memory, drives, and RAID.",covers:"Domain 3.0: RAM (3.3), storage devices (3.4), and motherboards, CPUs, and add-on cards (3.5)."},
@@ -1686,7 +1686,7 @@ function viewHome(){
     </a>`;}).join("")}
   </div></section>`).join("")}</div>
   <p class="note" style="margin-top:14px">Progress saves in this browser only. To start over, open Progress and choose Reset all progress.</p>
-  <p class="note">Provo A+ Core 1 <span class="badge">v1.0.1</span> · © 2026 Benjamin Smith. All rights reserved.</p>`;
+  <p class="note">Provo A+ Core 1 <span class="badge">v1.0.2</span> · © 2026 Benjamin Smith. All rights reserved.</p>`;
 }
 
 /* ---- generic pool runner ---- */
@@ -2726,6 +2726,49 @@ function termGroupState(mod){ const S=TERMSETS[mod]; return S.groups.map(([g,nam
 function termMastery(mod){ const S=TERMSETS[mod]; const done=S.items.filter(x=>termMastered(mod,x.id)).length;
   const v=S.items.reduce((a,x)=>a+(termMastered(mod,x.id)?1:Math.min(Object.keys(termKeys(mod,x.id)).length,S.need)/S.need),0)/S.items.length;
   return {v,cap:`${done} of ${S.items.length} terms mastered`}; }
+/*TQ2-START*/
+/* Term-question helpers: choose distractors that are plausible for this prompt, and detect giveaways. */
+const TQ_STOP=new Set("a an the of to in on for and or with by from that this is are be it its as at not no which what who how when where why does do can should would will than then into over after before most likely best first next user users technician company wants needs new one each every all any their they your you use used using so but if has have had was were been".split(" "));
+function tqWords(s){ const o=new Set(); String(s).toLowerCase().replace(/<[^>]+>/g," ").split(/[^a-z0-9+.\/-]+/).forEach(w=>{ if(w.length<3||TQ_STOP.has(w)) return; for(const e of ["ing","ed","es","s"]){ if(w.endsWith(e)&&w.length-e.length>=4){ w=w.slice(0,-e.length); break; } } o.add(w); }); return o; }
+function tqOverlap(a,b){ let n=0; a.forEach(w=>{ if(b.has(w)) n++; }); return n; }
+function tqShape(t){ t=String(t); return /^\.[a-z0-9]+$/.test(t)?"ext":t[0]==="/"?"path":/^[a-z][a-z0-9 \/?.:-]*$/.test(t)?"cmd":"name"; }
+/* What a scenario asks for ("Which command...", "What attack is this?"): terms whose scenarios ask for the same
+   kind of thing make the fairest options for each other. Null when the question is generic ("What is this?"). */
+const TQ_GEN=new Set("this it term problem one thing these they that concept practice step principle cause issue happened happening does is should fits fit describes best setting feature option control tool type kind method technique process approach solution has".split(" "));
+const TQ_DROP=new Set("the a an of built-in linux windows macos mac router browser file explorer power client network one single simple physical".split(" "));
+function tqAsk(it){
+  if(it._ask!==undefined) return it._ask;
+  const parts=String(it.sc||"").trim().split(/(?<=[.?!])\s+/).filter(Boolean), q=parts[parts.length-1]||"";
+  const m=q.match(/\b(?:which|what)\s+(?:(?:kind|type|sort|category)s?\s+of\s+)?((?:[a-z0-9-]+\s+){0,2}?[a-z0-9-]+?)\s+(?:is|are|was|were|does|do|did|should|would|will|can|could|fits|fit|has|have|had|must|needs|describes|explains|shows|lets|keeps|makes|stops|sets|provides|prevents|covers|controls|uses|applies|checks|carries|holds|gives|handles|adds|creates|protects|removes|drives|caused|causes|occurred|happened|opens|runs|lists|tests|manages|stores|allows|blocks)\b/i);
+  let a=null;
+  if(m){ const all=m[1].toLowerCase().split(/\s+/), w=all.filter(x=>!TQ_DROP.has(x)); let n=(w.length?w:all).pop();
+    if(n.length>4&&!n.endsWith("ss")) n=n.replace(/(es|s)$/,""); a=TQ_GEN.has(n)?null:n; }
+  return it._ask=a;
+}
+/* it: the item asked about; all: allowed candidates; field: the option text ("t", "def", or "fix").
+   Candidates: this group, plus any term whose scenario asks for the same kind of thing, plus (when this group is
+   short of them) terms of the same shape from other groups. Ranked by how alike they are, with a little chance. */
+function tqPick(it,all,n,prompt,field){
+  const sh=tqShape(it.t), ak=tqAsk(it); let c=all.filter(x=>x.g===it.g);
+  if(ak) c=c.concat(all.filter(x=>x.g!==it.g&&tqAsk(x)===ak));
+  if(c.filter(x=>tqShape(x.t)===sh).length<n) c=c.concat(all.filter(x=>x.g!==it.g&&tqShape(x.t)===sh&&!c.includes(x)));
+  if(c.length<n) c=all.slice();
+  const ref=tqWords(prompt+" "+it.t+" "+it.def+(field==="fix"?" "+it.fix:""));
+  const sc=c.map(x=>({x,s:(tqShape(x.t)===sh?4:0)+(x.g===it.g?2:0)+(ak&&tqAsk(x)===ak?6:0)+Math.min(6,tqOverlap(tqWords(x.t+" "+x.def+(field==="fix"?" "+x.fix:"")),ref))*1.5+Math.random()*2.5}));
+  sc.sort((a,b)=>b.s-a.s);
+  const out=[], seen=new Set([String(it[field]).toLowerCase()]);
+  for(const o of sc){ const k=String(o.x[field]).toLowerCase(); if(seen.has(k)) continue; seen.add(k); out.push(o.x); if(out.length===n) break; }
+  return out;
+}
+/* A scenario without its closing question, so a different question can follow it. */
+function tqStem(sc){ const p=String(sc).trim().split(/(?<=[.?!])\s+/).filter(Boolean); if(p.length>1&&/\?$/.test(p[p.length-1])) p.pop(); return p.join(" "); }
+/* True when words in the prompt point at the answer and at fewer than two of the other options. */
+function tqLeak(prompt,answer,others){
+  const pw=tqWords(prompt), lw=new Set(); tqWords(answer).forEach(w=>{ if(pw.has(w)) lw.add(w); });
+  if(!lw.size) return false;
+  return others.filter(o=>tqOverlap(tqWords(o),lw)>0).length<2;
+}
+/*TQ2-END*/
 function viewTerms(mod){
   const m=M(mod), S=TERMSETS[mod], ITEMS=S.items, NEED=S.need;
   const hasFix=ITEMS.filter(x=>x.fix).length>=4;
@@ -2737,7 +2780,7 @@ function viewTerms(mod){
     app.innerHTML=head()+strip()+`<div class="card"><h3 style="font-size:1.4rem">Choose a mode</h3>
     <p class="note" style="margin:.3em 0 12px">${done} of ${ITEMS.length} terms mastered.</p>
     <div class="acro-modes">
-      <div class="acro-mode"><h4>Questions</h4><p>Name the term from a description, define it, and spot it in a scenario${hasFix?", and "+(S.fixMenu||"pick the best defense against each attack"):""}. The glossary stays closed until you finish or quit.</p>
+      <div class="acro-mode"><h4>Questions</h4><p>${S.fixQ?"Read each problem, by name and in a scenario, and pick its usual fix.":"Name the term from a description, define it, and spot it in a scenario"+(hasFix?", and "+(S.fixMenu||"pick the best defense against each attack"):"")+"."} The glossary stays closed until you finish or quit.</p>
         <div class="cfg"><label for="tmlen">Questions</label><select id="tmlen" class="ans" style="width:auto"><option>10</option><option selected>20</option><option>40</option></select></div>
         <div class="q-actions"><button class="btn" id="tmstart">Start questions</button></div></div>
       ${S.typed?`<div class="acro-mode"><h4>Type the answer</h4><p>Read a scenario and type the term yourself, with no options to choose from. Harder, so it counts for more: a correct answer with no hint masters the term in one go. With a hint, it counts as one question. Small typos are fine.</p>
@@ -2760,23 +2803,24 @@ function viewTerms(mod){
     <div class="q-actions" style="margin-top:14px"><button class="btn" id="tmgo">Start questions</button></div></div>`;
     $("#tmback").addEventListener("click",menu); $("#tmgo").addEventListener("click",menu);
   }
-  function distract(it,n,field){
+  function distract(it,n,field,prompt){
     const bad=new Set([it.id,...(it.avoid||[])]); ITEMS.forEach(x=>{ if((x.avoid||[]).includes(it.id)) bad.add(x.id); });
-    let pool=ITEMS.filter(x=>x.g===it.g&&!bad.has(x.id)&&x[field]);
-    if(pool.length<n){ const gi=S.groups.findIndex(x=>x[0]===it.g); for(let k=1;k<S.groups.length&&pool.length<n;k++){ const near=S.groups[(gi+k)%S.groups.length][0]; pool=pool.concat(shuffle(ITEMS.filter(x=>x.g===near&&!bad.has(x.id)&&x[field]))); } }
-    return shuffle(pool.slice(0,Math.max(n,pool.length))).slice(0,n);
+    return tqPick(it,ITEMS.filter(x=>!bad.has(x.id)&&x[field]),n,prompt||"",field);
   }
   let lastId=null;
   function build(){
     const open=ITEMS.filter(x=>!termMastered(mod,x.id)&&x.id!==lastId); const it=(open.length&&Math.random()<0.8)?pick(open):pick(ITEMS.filter(x=>x.id!==lastId));
-    const have=termKeys(mod,it.id); const kinds=["name","def","scen"].concat(it.fix&&hasFix?["fix"]:[]); const fresh=kinds.filter(k=>!have[k]);
-    const kind=pick(fresh.length?fresh:kinds);
+    const have=termKeys(mod,it.id); const kinds=(S.fixQ&&it.fix)?["fix","sfix"]:["name","def","scen"].concat(it.fix&&hasFix?["fix"]:[]); const fresh=kinds.filter(k=>!have[k]);
+    const tqd={}; const dOf=k=>tqd[k]||(tqd[k]=k==="def"?distract(it,3,"def",it.t):distract(it,3,"t",k==="name"?it.def:it.sc));
+    const leaky=k=>k==="name"?tqLeak(it.def,it.t,dOf(k).map(x=>x.t)):k==="def"?tqLeak(it.t,it.def,dOf(k).map(x=>x.def)):k==="scen"?(tqLeak(it.sc,it.t,dOf(k).map(x=>x.t))||(!!tqAsk(it)&&dOf(k).filter(x=>tqAsk(x)===tqAsk(it)).length<2)):k==="fix"?tqOverlap(tqWords(it.fix),tqWords(it.t))>0:false;
+    const cand=shuffle((fresh.length?fresh:kinds).slice()); const kind=cand.find(k=>!leaky(k))||cand[0];
+    const tqline=x=>`<b>${esc(x.t)}:</b> ${esc(x.def)}.`;
     const ex=`<b>${esc(it.t)}:</b> ${esc(it.def)}.`;
-    if(kind==="name"){ const d=distract(it,3,"t"); return {it,kind,cfg:{prompt:`Which term matches this description?<span style="display:block;margin-top:.4em"><b>${esc(it.def)}</b></span>`,options:[it.t,...d.map(x=>x.t)],answer:0,explain:ex,why:["",...d.map(x=>`That is ${esc(x.def.charAt(0).toLowerCase()+x.def.slice(1))}.`)]}}; }
-    if(kind==="def"){ const d=distract(it,3,"def"); return {it,kind,cfg:{prompt:`What is <b>${esc(it.t)}</b>?`,options:[it.def,...d.map(x=>x.def)],answer:0,explain:ex,why:["",...d.map(x=>`That describes <b>${esc(x.t)}</b>, not ${esc(it.t)}.`)]}}; }
-    if(kind==="scen"){ const d=distract(it,3,"t"); return {it,kind,cfg:{prompt:esc(it.sc),options:[it.t,...d.map(x=>x.t)],answer:0,explain:ex,why:["",...d.map(x=>`${esc(x.def)}. That is not what this scenario describes.`)]}}; }
-    const bad=new Set([it.id,...(it.avoid||[]),...(it.fixAvoid||[])]); const d=shuffle(ITEMS.filter(x=>x.fix&&x.fix!==it.fix&&!bad.has(x.id)&&!(x.avoid||[]).includes(it.id)&&!(x.fixAvoid||[]).includes(it.id))).slice(0,3);
-    return {it,kind,cfg:{prompt:`${S.fixQ||"Which defense BEST mitigates"} <b>${esc(it.t)}</b>?`,options:[it.fix,...d.map(x=>x.fix)],answer:0,explain:`${S.fixQ?"It is the usual fix for":"It is the targeted defense against"} ${esc(it.t)}. ${esc(it.t)}: ${esc(it.def)}.`,why:["",...d.map(x=>`${S.fixQ?"That is the usual fix for":"That is the main defense against"} <b>${esc(x.t)}</b>, a different problem: ${esc(x.def.charAt(0).toLowerCase()+x.def.slice(1))}.`)]}};
+    if(kind==="name"){ const d=dOf("name"); return {it,kind,cfg:{prompt:`Which term matches this description?<span style="display:block;margin-top:.4em"><b>${esc(it.def)}</b></span>`,options:[it.t,...d.map(x=>x.t)],answer:0,explain:`<b>${esc(it.t)}:</b> ${esc(it.def)}.`,why:["",...d.map(tqline)]}}; }
+    if(kind==="def"){ const d=dOf("def"); return {it,kind,cfg:{prompt:`Which description fits this term?<span style="display:block;margin-top:.4em"><b>${esc(it.t)}</b></span>`,options:[it.def,...d.map(x=>x.def)],answer:0,explain:`<b>${esc(it.t)}:</b> ${esc(it.def)}.`,why:["",...d.map(x=>`That describes <b>${esc(x.t)}</b>.`)]}}; }
+    if(kind==="scen"){ const d=dOf("scen"); return {it,kind,cfg:{prompt:esc(it.sc),options:[it.t,...d.map(x=>x.t)],answer:0,explain:`<b>${esc(it.t)}:</b> ${esc(it.def)}.`,why:["",...d.map(tqline)]}}; }
+    const bad=new Set([it.id,...(it.avoid||[]),...(it.fixAvoid||[])]); const d=tqPick(it,ITEMS.filter(x=>x.fix&&x.fix!==it.fix&&!bad.has(x.id)&&!(x.avoid||[]).includes(it.id)&&!(x.fixAvoid||[]).includes(it.id)),3,it.t+" "+it.def,"fix");
+    return {it,kind,cfg:{prompt:kind==="sfix"?esc(tqStem(it.sc))+" What is the usual fix?":`${S.fixQ?S.fixQ+" this problem?":"Which defense BEST mitigates this?"}<span style="display:block;margin-top:.4em"><b>${esc(it.t)}</b></span>`,options:[it.fix,...d.map(x=>x.fix)],answer:0,explain:`<b>${esc(it.t)}:</b> ${esc(it.def)}. ${S.fixQ?"The usual fix":"The best defense"}: ${esc(it.fix)}.`,why:["",...d.map(x=>`${S.fixQ?"That is the usual fix for":"That is the main defense against"} <b>${esc(x.t)}</b>, a different problem.`)]}};
   }
   function finish(R,before,N,again){
     curKeys=null;
@@ -2826,7 +2870,7 @@ function viewTerms(mod){
     app.innerHTML=head()+`<div id="tmstrip"></div><div class="examtop"><button class="chipbtn" id="tmquit" type="button">Quit</button><span id="tmprog"></span></div><div id="area"></div>`;
     const area=$("#area"); $("#tmstrip").innerHTML=strip();
     $("#tmquit").addEventListener("click",()=>{ R.quit=true; finish(R,before,N,drill); });
-    const KN={name:"Name it",def:"Define it",scen:"Scenario",fix:S.fixCol||"Best defense"};
+    const KN={name:"Name it",def:"Define it",scen:"Scenario",fix:S.fixCol||"Best defense",sfix:"Scenario"};
     function next(){
       if(R.t>=N) return finish(R,before,N,drill); if(bpTurn(mod)) return bpAsk(area,mod,R,next,"#tmprog",N);
       $("#tmprog").textContent=`Question ${R.t+1} of ${N}`;
@@ -2957,10 +3001,11 @@ function viewAcro(){
       if(S.t>=N) return finish();
       $("#acroprog").textContent=`Question ${S.t+1} of ${N}`;
       const it=pickItem(); const box=P.acro[it.id]||0;
-      const type=typeOnly?wpick([["which",2],["does",2],["spell",2]]):wpick([["stands",3],["which",2],["does",3],["what",2]]);
+      let type=typeOnly?wpick([["does",3],["spell",3]]):wpick([["stands",3],["does",3],["what",3]]);
+      const tqSelf=new RegExp("(^|[^A-Za-z0-9])"+String(it.a).replace(/[.*+?^${}()|[\]\\]/g,"\\$&")+"([^A-Za-z0-9+]|$)").test(it.d); if(type==="does"&&tqSelf) type=typeOnly?"spell":"what";
       const typed=typeOnly || ((type==="which"||type==="does") && Math.random()<0.4);
       const pts=typeOnly?2:1;
-      const labels={stands:"Spell it out",which:"Name the acronym",does:"Match the description",what:"What it does",spell:"Type what it stands for"};
+      const labels={stands:"Spell it out",which:"Name the acronym",does:"Match the description",what:"What it is",spell:"Type what it stands for"};
       const meta=domTag(it.dom)+`<span class="tag">${esc(it.g)}</span>${it.t===2?`<span class="tag" title="On CompTIA's acronym list but rarely tested. Does not count toward the module rank.">Also listed</span>`:""}<span class="tag">${labels[type]}</span><span class="tag" title="One dot per correct answer in a row. Strength 4 masters the acronym. A miss resets the dots, but a mastered acronym stays mastered.">Strength <span class="strength">${"●".repeat(box)}${"○".repeat(4-box)}</span></span>${acroIsMastered(it.id)?`<span class="tag" style="color:var(--green);border-color:var(--green)">Mastered</span>`:""}`;
       const cfgBase={meta,explain:explain(it),onResult:ok=>grade(it,ok),onNext:next,nextLabel:S.t+1>=N?"Finish":"Next"};
       if(type==="stands"){
@@ -2970,7 +3015,7 @@ function viewAcro(){
       }
       if(type==="what"){
         const d=distractors(it,3,"d");
-        return choiceQ(area,{...cfgBase,prompt:`What does <span class="big">${esc(acroLabel(it))}</span> do?`,options:[it.d,...d.map(x=>x.d)],answer:0,why:["",...d.map(y=>`That describes <b>${esc(y.a)}</b> (${esc(y.x)}).`)]});
+        return choiceQ(area,{...cfgBase,prompt:`What is <span class="big">${esc(acroLabel(it))}</span>?`,options:[it.d,...d.map(x=>x.d)],answer:0,why:["",...d.map(y=>`That describes <b>${esc(y.a)}</b> (${esc(y.x)}).`)]});
       }
       const prompt = type==="which"
         ? `Which acronym stands for <b>${esc(it.x)}</b>?`
