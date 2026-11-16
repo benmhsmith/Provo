@@ -34,13 +34,13 @@ Each module gives you a rank from Beginner to Pro based on what you have actuall
 
 ## Screenshots
 
-<p><img src="../../docs/images/provo-home-v2.png" alt="Home page with the domain weighting bar and Stage 1 modules." width="860"></p>
+<p><img src="../../docs/images/provo-home-v3.png" alt="Home page with the domain weighting bar and Stage 1 modules." width="860"></p>
 
 | Subnetting | VLAN and trunk PBQ |
 |---|---|
-| <img src="../../docs/images/provo-subnetting-v2.png" alt="Subnetting module asking a question about an IPv4 address and prefix." width="420"> | <img src="../../docs/images/provo-pbq-vlan-v2.png" alt="Switch console with show spanning-tree vlan 10 output." width="420"> |
+| <img src="../../docs/images/provo-subnetting-v3.png" alt="Subnetting module asking a question about an IPv4 address and prefix." width="420"> | <img src="../../docs/images/provo-pbq-vlan-v3.png" alt="Switch console with show spanning-tree vlan 10 output." width="420"> |
 | **Cable and port diagnostics PBQ** | **Phone, dark mode** |
-| <img src="../../docs/images/provo-pbq-cable-v2.png" alt="Cable tester wire map and switch port output for one desk." width="420"> | <img src="../../docs/images/provo-phone-home-v2.png" alt="Home page on a phone in dark mode." width="200"> |
+| <img src="../../docs/images/provo-pbq-cable-v3.png" alt="Cable tester wire map and switch port output for one desk." width="420"> | <img src="../../docs/images/provo-phone-home-v3.png" alt="Home page on a phone in dark mode." width="200"> |
 
 ## How to use it
 

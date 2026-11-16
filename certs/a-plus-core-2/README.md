@@ -17,6 +17,8 @@ All 14 modules are open:
 
 Use it in your browser: https://benmhsmith.github.io/Provo/a-plus-core-2/
 
+<p><img src="../../docs/images/provo-aplus2-home-v3.png" alt="Provo A+ Core 2 home page with the command prompt header art, the domain weighting bar, and Stage 1 modules." width="860"></p>
+
 ## Exam at a glance
 
 - Up to 90 questions in 90 minutes. Multiple choice (single and multiple response), drag and drop, and performance-based questions.

@@ -18,7 +18,7 @@ All 14 modules are open:
 
 Use it in your browser: https://benmhsmith.github.io/Provo/a-plus-core-1/
 
-<p><img src="../../docs/images/provo-aplus1-home-v2.png" alt="Provo A+ Core 1 home page with the motherboard header art, the domain weighting bar, and Stage 1 modules." width="860"></p>
+<p><img src="../../docs/images/provo-aplus1-home-v3.png" alt="Provo A+ Core 1 home page with the motherboard header art, the domain weighting bar, and Stage 1 modules." width="860"></p>
 
 ## Exam at a glance
 
