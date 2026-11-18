@@ -1,5 +1,8 @@
 # Provo Network+ changelog
 
+## v5.3.6
+- Exhibit questions in the mini-exams now show their exhibit (the log, table, or command output) under the question. Before, only the question text appeared, which made these questions impossible to answer. The Skill Drill, module practice, and exam review were not affected.
+
 ## v5.3.5
 - Fairer Security module questions: the wrong answers are now chosen to be the same kind of thing as the right one, so the answer no longer stands out. A question that would give its own answer away is skipped when the term can be asked another way.
 - Clearer wording: "What is X?" is now "Which description fits this term?", and feedback lines name each term and give its definition as a full sentence.
