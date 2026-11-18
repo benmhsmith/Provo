@@ -4,7 +4,7 @@
 
 Provo's study lab for the **CompTIA CySA+ CS0-004** exam. It drills every exam objective, tracks what you have mastered, and finishes with timed mini-exams weighted to the official domains.
 
-**Current release:** [v1.0.5](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.5) · [All CySA+ releases](https://github.com/benmhsmith/Provo/releases?q=cysa-plus) · [What changed](CHANGELOG.md)
+**Current release:** [v1.0.6](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.6) · [All CySA+ releases](https://github.com/benmhsmith/Provo/releases?q=cysa-plus) · [What changed](CHANGELOG.md)
 
 Built from the official CompTIA CySA+ CS0-004 Exam Objectives (v2.0): 100 exam-focused acronyms, 302 terms, log-analysis and YARA labs, seven performance-based questions, a 160-question Exam-Style Drill, and 250 analyst scenarios, including the new CS0-004 topics such as reading XML and JSON logs, AI in security operations, EPSS, SBOM and SCA, STRIDE, the Pyramid of Pain, LOLBins, and business email compromise.
 
@@ -31,7 +31,7 @@ Built from the official CompTIA CySA+ CS0-004 Exam Objectives (v2.0): 100 exam-f
 | 5 · Exam skills | 15 Question Qualifiers | FIRST, NEXT, BEST, MOST likely, and MINIMUM analyst scenarios | All |
 | | 16 Exam-Style Drill | All 160 original questions across 53 skills, in four styles: direct, scenario, exhibit (logs, scans, SIEM, IDS, EDR), and round best-fit. Drill by skill, domain, Heavy skills, or misses | All |
 | | 17 Performance-Based Questions | Seven exam-style simulations, a new variation every run: scan prioritization, phishing headers, compromised hosts, Nmap hardening, IR phases and order of volatility, alert triage, YARA matching | All |
-| 6 · Test | 18 Mini-Exams | 10, 20, or 40 questions, timed and weighted to the domains, with a full review | All |
+| 6 · Test | 18 Mini-Exams | 10, 20, or 40 questions with PBQs first, or every PBQ back to back; timed and weighted to the domains, with a full review | All |
 
 Modules 02–14 each offer **Questions** (multiple choice and typed) and **Type the answer** (read a scenario and type the term). Every question explains why the right answer is right and why each other option is wrong. Every objective module also mixes in the new exam-style questions for its objectives, one in every four questions, so you practice the way the exam asks from the first module on. A right answer there also counts in the Exam-Style Drill. There is also a one-page **Cram Sheet** and a **Progress** page.
 

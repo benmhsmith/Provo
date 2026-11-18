@@ -2,7 +2,7 @@
 
 Provo's study lab for the **CompTIA Security+ SY0-701** exam. It drills every exam domain, tracks what you have mastered, and finishes with timed mini-exams weighted to the official domains.
 
-**Current release:** [v1.4.5](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.5) · [All Security+ releases](https://github.com/benmhsmith/Provo/releases?q=security-plus) · [What changed](CHANGELOG.md)
+**Current release:** [v1.4.6](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.6) · [All Security+ releases](https://github.com/benmhsmith/Provo/releases?q=security-plus) · [What changed](CHANGELOG.md)
 
 Every module covers its full objectives: 178 exam-focused acronyms, 394 terms, 336 exam-style questions (including 169 in the Exam-Style Drill), and 24 hands-on labs. Six performance-based questions generate a new variation on every run.
 
@@ -25,7 +25,7 @@ Every module covers its full objectives: 178 exam-focused acronyms, 394 terms, 3
 | 4 · Exam skills | 11 Question Qualifiers | FIRST, NEXT, BEST, MOST likely, and MINIMUM questions | All |
 | | 12 Exam-Style Drill | All 169 exam-style questions across 38 skills: direct, scenario, exhibit (logs, headers, tables), and round best-fit. Practice by skill, domain, Heavy skills, or misses | All |
 | | 13 Performance-Based Questions | Six simulations, a new variation every run: CIA and control types, attacks and controls, device placement, a broken site-to-site VPN, key-based SSH, and an outbreak trace | 1.1–1.2, 2.2–2.5, 3.2, 4.1, 4.6, 4.8–4.9 |
-| 5 · Test | 14 Mini-Exams | 10, 20, or 40 multiple-choice questions, timed and weighted | All |
+| 5 · Test | 14 Mini-Exams | 10, 20, or 40 questions with PBQs first, or every PBQ back to back; timed and weighted | All |
 
 Modules 02–10 each offer three ways to study: **Questions** (multiple choice and typed), **Type the answer** (read a scenario and type the term; a clean answer masters the term in one go), and **hands-on labs** (drag-and-drop, sorting, ordering, and inspection tasks that work with a mouse or a finger). Module 01 has a **Type it** mode as well. Every objective module also mixes in the new exam-style questions for its objectives, one in every four questions, so you practice the way the exam asks from the first module on. A right answer there also counts in the Exam-Style Drill.
 
@@ -88,7 +88,7 @@ Joplin on iPhone and iPad only allows plugins from its recommended list, so use 
 - **Term modules (02–10)** all run on one engine. Each term is asked several ways (name it, define it, a scenario, and for attacks, the best defense). A term is mastered after two different kinds of question about it are answered correctly. Content lives in `TERMSETS` in the source file, one entry per module.
 - **Acronyms** use the same engine as Network+. `ACRO` holds the 178 exam-focused acronyms chosen from CompTIA's full list.
 - **Type the answer** is turned on per module with `typed:true` in `TERMSETS`. Answers are matched with `tyMatch` (case, spacing, punctuation, a trailing "control" or "s", small typos, and each term's `alt` names). A clean correct answer gives two kinds of credit (`typed`, `typed2`), which masters the term.
-- **Question Qualifiers** use `QUAL`; **Mini-Exams** draw from `BANK` plus the original `QUAL` items, picked by domain weight. `QUAL` items marked `drill:1` are qualifier-trap practice only and never appear in mini-exams.
+- **Question Qualifiers** use `QUAL`; **Mini-Exams** draw from `BANK` plus the original `QUAL` items, picked by domain weight, with generated PBQs from `CPBQ` first (`EXAM_PLAN` sets how many). `QUAL` items marked `drill:1` are qualifier-trap practice only and never appear in mini-exams.
 - Progress is saved under its own key, so Security+ and Network+ never overwrite each other, even on the same website.
 - The Joplin plugin has its own ID (`io.github.provo.securityplus`) and its own note block, ` ```sec+ `, so it installs beside Provo Network+.
 
