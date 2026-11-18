@@ -1686,7 +1686,7 @@ function viewHome(){
     </a>`;}).join("")}
   </div></section>`).join("")}</div>
   <p class="note" style="margin-top:14px">Progress saves in this browser only. To start over, open Progress and choose Reset all progress.</p>
-  <p class="note">Provo A+ Core 1 <span class="badge">v1.0.3</span> · © 2026 Benjamin Smith. All rights reserved.</p>`;
+  <p class="note">Provo A+ Core 1 <span class="badge">v1.0.4</span> · © 2026 Benjamin Smith. All rights reserved.</p>`;
 }
 
 /* ---- generic pool runner ---- */
@@ -3122,7 +3122,7 @@ function runExam(len,timed){
   function next(){ if(finished) return; cur=null; if(!queue.length) return finish(); const it=queue.shift(); it.kind==="pbq"?showPBQ(it.p):showMC(it.k); }
   function showMC(k){
     const q=qs[k]; $("#eprog").textContent=label()+" · multiple choice";
-    choiceQ($("#area"),{meta:domTag(q.d),prompt:esc(q.q),options:q.o,answer:q.a,explain:esc(q.x),deferred:true,nextLabel:queue.length?"Next":"Finish",
+    choiceQ($("#area"),{meta:domTag(q.d),prompt:esc(q.q)+logBlock(q.h),options:q.o,answer:q.a,explain:esc(q.x),deferred:true,nextLabel:queue.length?"Next":"Finish",
       onSelect:v=>{ans[k]=v;},onNext:v=>{ ans[k]=v; answered++; next(); }});
   }
   const orderFor=(p,it)=>{ if(it.ord) return it.o.map((_,j)=>j); const key=JSON.stringify(it.o); return p.orders[key]||(p.orders[key]=shuffle(it.o.map((_,j)=>j))); };

@@ -1,5 +1,8 @@
 # Provo A+ Core 2 changelog
 
+## v1.0.2
+- Exhibit questions in the mini-exams now show their exhibit (the log, table, or command output) under the question. Before, only the question text appeared, which made these questions impossible to answer. The Skill Drill, module practice, and exam review were not affected.
+
 ## v1.0.1
 - Mini-exams now include performance-based questions, as on the real exam. The 10-, 20-, and 40-question exams start with 1, 2, or 4 PBQs, spread across the domains, and a new All PBQs option runs every PBQ back to back.
 - Each PBQ is worth 2 multiple-choice questions, scored by the share of items you get right. Time is 1 minute per multiple-choice question plus 6 minutes per PBQ.

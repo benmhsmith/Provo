@@ -2,7 +2,7 @@
 
 Provo's study lab for the **CompTIA A+ Core 1 (220-1201)** exam. It drills every exam domain, tracks what you have mastered, and finishes with timed mini-exams weighted to the official domains.
 
-**Current release:** [v1.0.3](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.3) · [All A+ Core 1 releases](https://github.com/benmhsmith/Provo/releases?q=a-plus-core-1) · [What changed](CHANGELOG.md)
+**Current release:** [v1.0.4](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.4) · [All A+ Core 1 releases](https://github.com/benmhsmith/Provo/releases?q=a-plus-core-1) · [What changed](CHANGELOG.md)
 
 A+ certification takes two exams. This tool covers **Core 1 (220-1201)**. [Core 2 (220-1202)](../a-plus-core-2/) has its own tool.
 

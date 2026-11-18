@@ -34,11 +34,11 @@ Each exam is released on its own, so check the **Current release** column here r
 
 | Exam | Exam code | Status | Current release | Start here |
 |---|---|---|---|---|
-| CompTIA Network+ | N10-009 | **Available** | [v5.3.5](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.5) | [Provo Network+](certs/network-plus/) |
-| CompTIA Security+ | SY0-701 | **Available** | [v1.4.6](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.6) | [Provo Security+](certs/security-plus/) |
-| CompTIA CySA+ | CS0-004 | **Available** | [v1.0.6](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.6) | [Provo CySA+](certs/cysa-plus/) |
-| CompTIA A+ Core 1 | 220-1201 | **Available** | [v1.0.3](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.3) | [Provo A+ Core 1](certs/a-plus-core-1/) |
-| CompTIA A+ Core 2 | 220-1202 | **Available** | [v1.0.1](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-2-v1.0.1) | [Provo A+ Core 2](certs/a-plus-core-2/) |
+| CompTIA Network+ | N10-009 | **Available** | [v5.3.6](https://github.com/benmhsmith/Provo/releases/tag/network-plus-v5.3.6) | [Provo Network+](certs/network-plus/) |
+| CompTIA Security+ | SY0-701 | **Available** | [v1.4.7](https://github.com/benmhsmith/Provo/releases/tag/security-plus-v1.4.7) | [Provo Security+](certs/security-plus/) |
+| CompTIA CySA+ | CS0-004 | **Available** | [v1.0.7](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.7) | [Provo CySA+](certs/cysa-plus/) |
+| CompTIA A+ Core 1 | 220-1201 | **Available** | [v1.0.4](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.4) | [Provo A+ Core 1](certs/a-plus-core-1/) |
+| CompTIA A+ Core 2 | 220-1202 | **Available** | [v1.0.2](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-2-v1.0.2) | [Provo A+ Core 2](certs/a-plus-core-2/) |
 
 ## See it in action
 
