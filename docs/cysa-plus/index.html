@@ -1367,7 +1367,7 @@ const MODULES = [
  {id:"qualifier",n:"15",stage:5,name:"Question Qualifiers",desc:"Questions where FIRST, NEXT, BEST, MOST likely, or MINIMUM decides the answer.",covers:"All domains. 25 analyst scenarios across five qualifiers, each with a defensible runner-up, and the explanation says why it loses."},
  {id:"drill",n:"16",stage:5,name:"Exam-Style Drill",desc:"All 160 exam-style questions in one place, by skill and domain. You also meet them mixed into every objective module.",covers:"All four domains. Practice one skill, one domain, every Heavy skill, or only the round best-fit questions."},
  {id:"pbq",n:"17",stage:5,name:"Performance-Based Questions",desc:"Seven exam-style simulations that change every run: scan prioritization, phishing headers, compromised hosts, Nmap hardening, IR phases, alert triage, and YARA matching.",covers:"All four domains, in the drop-down simulation style of the exam. Every run is a new variation with shuffled choices, and every item is explained when you check."},
- {id:"exam",n:"18",stage:6,name:"Mini-Exams",desc:"10, 20, or 40 multiple-choice questions, timed and weighted to the official domains.",covers:"All four domains, picked in proportion to CompTIA's weights (34 / 26 / 24 / 16) from 275 scenario questions."},
+ {id:"exam",n:"18",stage:6,name:"Mini-Exams",desc:"10, 20, or 40 questions with PBQs first, or every PBQ back to back. Timed and weighted to the official domains.",covers:"All four domains, picked in proportion to CompTIA's weights (34 / 26 / 24 / 16) from 275 scenario questions."},
  {id:"cram",n:"",menu:true,name:"Cram Sheet",desc:"The high-yield facts on one page, for the night before.",covers:"The highest-yield CS0-004 facts on one page."},
  {id:"progress",n:"",menu:true,name:"Progress",desc:"Mastery per module and what to study next.",covers:"Progress is stored only in this browser. Clearing browser data or switching devices starts fresh."}
 ];
@@ -1625,7 +1625,7 @@ function mastery(id){
     case "drill":{ const all=BANK.filter(q=>q.sk), n=all.filter(q=>(P.bp||{})[q.id]).length; return {v:n/all.length,cap:`${n} of ${all.length} exam-style questions right`}; }
     case "acro":{ const l=acroCore(); const n=acroMastered(l); return {v:n/l.length,cap:`${n} of ${l.length} acronyms mastered`}; }
     case "qualifier":{ const Q=qualState(); const done=Q.filter(x=>x.mastered).length; const v=Q.reduce((a,x)=>a+Math.min(x.c,QUAL_NEED)/QUAL_NEED,0)/Q.length; return {v,cap:`${done} of ${Q.length} qualifiers mastered`}; }
-    case "exam":{ const full=P.exams.filter(e=>e.total>=EXAM_FULL_MIN).slice(-EXAM_NEED); if(!full.length) return {v:0,cap:P.exams.length?"Take a 20- or 40-question exam to count":"No exams yet"}; const v=full.reduce((a,e)=>a+e.score/e.total,0)/EXAM_NEED; return {v,cap:`Last ${full.length} of ${EXAM_NEED} full exams · avg ${pct(full.reduce((a,e)=>a+e.score/e.total,0)/full.length)}%`}; }
+    case "exam":{ const full=P.exams.filter(e=>e.full||(e.full===undefined&&e.total>=EXAM_FULL_MIN)).slice(-EXAM_NEED); if(!full.length) return {v:0,cap:P.exams.length?"Take a 20- or 40-question exam to count":"No exams yet"}; const v=full.reduce((a,e)=>a+e.score/e.total,0)/EXAM_NEED; return {v,cap:`Last ${full.length} of ${EXAM_NEED} full exams · avg ${pct(full.reduce((a,e)=>a+e.score/e.total,0)/full.length)}%`}; }
     default: return null;
   }
 }
@@ -1731,7 +1731,7 @@ function viewHome(){
     </a>`;}).join("")}
   </div></section>`).join("")}</div>
   <p class="note" style="margin-top:14px">Progress saves in this browser only. To start over, open Progress and choose Reset all progress.</p>
-  <p class="note">Provo CySA+ <span class="badge">v1.0.5</span> · © 2026 Benjamin Smith. All rights reserved.</p>`;
+  <p class="note">Provo CySA+ <span class="badge">v1.0.6</span> · © 2026 Benjamin Smith. All rights reserved.</p>`;
 }
 
 /* ---- generic pool runner ---- */
@@ -3616,60 +3616,106 @@ function weightedPick(len){
   return shuffle(out);
 }
 let examTimer=null;
+/*EXPBQ-START*/
+/* Mini-exams follow the Network+ plan: PBQs first, each worth PBQ_WEIGHT multiple-choice questions. */
+const PBQ_WEIGHT=2, PBQ_MIN=6; /* points per PBQ, and minutes allowed for each */
+const EXAM_PLAN={10:{mc:9,pbq:1},20:{mc:18,pbq:2},40:{mc:36,pbq:4},pbq:{mc:0,get pbq(){ return CPBQ.length; }}}; /* the PBQ list is defined later in the file */
 const EXAM_SIZES=[10,20,40];
-function examMinutes(n){ return n; }
+function examMinutes(len){ const pl=EXAM_PLAN[len]; return pl.mc+pl.pbq*PBQ_MIN; }
+/* PBQs for one exam: one per domain in turn, heaviest domains first, so a short exam isn't all one domain. */
+function examPbqPick(n){
+  if(n>=CPBQ.length) return shuffle(CPBQ.slice());
+  const by={}; shuffle(CPBQ.slice()).forEach(x=>(by[x.dom]=by[x.dom]||[]).push(x));
+  const doms=Object.keys(by).sort((a,b)=>(DOMW[b]||0)-(DOMW[a]||0)+Math.random()-.5), out=[];
+  while(out.length<n) for(const d of doms){ if(out.length<n&&by[d].length) out.push(by[d].shift()); }
+  return shuffle(out);
+}
+/*EXPBQ-END*/
 function viewExam(){
   const m=M("exam");
   if(examTimer){ clearInterval(examTimer); examTimer=null; }
   const hist=P.exams.slice(-5).reverse(); const poolN=examPool().length;
+  const row=n=>{ const pl=EXAM_PLAN[n]; return `<tr><td class="mono">${n==="pbq"?"All PBQs":n}</td><td>${pl.mc?`${pl.mc} multiple choice + ${pl.pbq} PBQ${pl.pbq>1?"s":""}`:`Every PBQ back to back: ${pl.pbq} PBQs`}</td><td class="mono">${examMinutes(n)} min</td></tr>`; };
   app.innerHTML=modHead(m,"",true)+`<div class="card"><h3 style="font-size:1.4rem">Set up a mini-exam</h3>
-  <div class="cfg"><label for="elen">Questions</label><select id="elen" class="ans" style="width:auto">${EXAM_SIZES.map(n=>`<option${n===20?" selected":""}>${n}</option>`).join("")}</select>
+  <div class="cfg"><label for="elen">Questions</label><select id="elen" class="ans" style="width:auto">${EXAM_SIZES.map(n=>`<option${n===20?" selected":""}>${n}</option>`).join("")}<option value="pbq">All PBQs (${CPBQ.length})</option></select>
   <label><input type="checkbox" id="etime" checked> Timed</label></div>
-  <p class="note">Multiple-choice questions only, picked in proportion to the official domain weights. Time is 1 minute per question, the same pace as the real exam (up to 90 questions in 90 minutes).</p>
-  <p class="note">Your module rank is the average of your last ${EXAM_NEED} full exams (20 or 40 questions). Until you have taken ${EXAM_NEED}, the missing ones count as 0. 10-question exams are for quick practice and do not count toward the rank.</p>
+  <div class="tw" style="margin:8px 0"><table><thead><tr><th>Size</th><th>What's in it</th><th>Time</th></tr></thead><tbody>${[...EXAM_SIZES,"pbq"].map(row).join("")}</tbody></table></div>
+  <p class="note">Multiple-choice questions are picked in proportion to the official domain weights, and PBQs are spread across the domains. Time is 1 minute per multiple-choice question plus ${PBQ_MIN} minutes per PBQ. PBQs come first, as on the real exam, and each is worth ${PBQ_WEIGHT} questions, scored by the share of items you get right. You can flag a PBQ and skip it; your answers are kept and it comes back after the multiple choice.</p>
+  <p class="note">Your module rank is the average of your last ${EXAM_NEED} full exams (20 or 40 questions, or all PBQs). Until you have taken ${EXAM_NEED}, the missing ones count as 0. 10-question exams are for quick practice and do not count toward the rank.</p>
   ${poolN<40?`<div class="callout">The question bank is still being written: <b>${poolN}</b> questions so far. Larger exams use every available question until the bank grows.</div>`:""}
   <div class="q-actions"><button class="btn" id="estart">Start exam</button></div>
   ${hist.length?`<h3 style="font-size:1.2rem;margin-top:18px">Recent results</h3><div class="tw"><table><thead><tr><th>Date</th><th>Score</th><th>Weakest domain</th></tr></thead><tbody>${hist.map(e=>`<tr><td>${esc(e.date)}</td><td class="mono">${e.score}/${e.total} (${pct(e.score/e.total)}%)</td><td>${esc(e.weak)}</td></tr>`).join("")}</tbody></table></div>`:""}
   </div>`;
   curKeys=null;
-  $("#estart").addEventListener("click",()=>runExam(+$("#elen").value,$("#etime").checked));
+  $("#estart").addEventListener("click",()=>runExam($("#elen").value==="pbq"?"pbq":+$("#elen").value,$("#etime").checked));
 }
 function runExam(len,timed){
-  const qs=weightedPick(len); const ans=new Array(qs.length).fill(null);
-  let pos=0, timeUp=false, finished=false, secs=examMinutes(qs.length)*60;
+  const plan=EXAM_PLAN[len];
+  const qs=plan.mc?weightedPick(plan.mc):[]; const ans=new Array(qs.length).fill(null);
+  const pbqs=examPbqPick(plan.pbq).map(x=>({x,v:x.gen(),sel:null,done:false,orders:{}}));
+  const queue=[...pbqs.map(p=>({kind:"pbq",p})),...qs.map((q,k)=>({kind:"mc",k}))];
+  const totalItems=queue.length; let answered=0, timeUp=false, finished=false, cur=null, secs=examMinutes(len)*60;
   const clockText=()=>timed?`${Math.floor(Math.max(0,secs)/60)}:${String(Math.max(0,secs)%60).padStart(2,"0")} left`:"";
   app.innerHTML=`<a class="back" href="#exam">← Exit exam</a><div class="examtop"><span id="eprog"></span><span class="mono" id="eclock">${clockText()}</span></div><div id="area"></div>`;
   if(timed){ examTimer=setInterval(()=>{ secs--; const c=$("#eclock"); if(c) c.textContent=clockText(); if(secs<=0){ clearInterval(examTimer); examTimer=null; timeUp=true; finish(); } },1000); }
-  function next(){
-    if(finished) return; if(pos>=qs.length) return finish();
-    const k=pos, q=qs[k]; $("#eprog").textContent=`Question ${k+1} of ${qs.length}`;
-    choiceQ($("#area"),{meta:domTag(q.d),prompt:esc(q.q)+logBlock(q.h),options:q.o,answer:q.a,explain:esc(q.x),deferred:true,nextLabel:k+1<qs.length?"Next":"Finish",
-      onSelect:v=>{ans[k]=v;},onNext:v=>{ ans[k]=v; pos++; next(); }});
+  const label=()=>`Item ${Math.min(answered+1,totalItems)} of ${totalItems}`;
+  function next(){ if(finished) return; cur=null; if(!queue.length) return finish(); const it=queue.shift(); it.kind==="pbq"?showPBQ(it.p):showMC(it.k); }
+  function showMC(k){
+    const q=qs[k]; $("#eprog").textContent=label()+" · multiple choice";
+    choiceQ($("#area"),{meta:domTag(q.d),prompt:esc(q.q),options:q.o,answer:q.a,explain:esc(q.x),deferred:true,nextLabel:queue.length?"Next":"Finish",
+      onSelect:v=>{ans[k]=v;},onNext:v=>{ ans[k]=v; answered++; next(); }});
   }
+  const orderFor=(p,it)=>{ if(it.ord) return it.o.map((_,j)=>j); const key=JSON.stringify(it.o); return p.orders[key]||(p.orders[key]=shuffle(it.o.map((_,j)=>j))); };
+  const readSel=p=>{ const sels=[...document.querySelectorAll("#area .pbq-row select")]; if(sels.length) p.sel=sels.map(x=>x.value); };
+  function showPBQ(p){
+    cur=p; const v=p.v, more=queue.length>0;
+    $("#eprog").textContent=label()+` · PBQ (about ${PBQ_MIN} min)`;
+    $("#area").innerHTML=`<div class="card"><div class="q-meta">${domTag(p.x.dom)}<span class="tag">Performance-based</span><span class="tag">Worth ${PBQ_WEIGHT} questions</span></div><h3 style="font-size:1.25rem;margin:.3em 0 0">${esc(p.x.name)}</h3><p style="margin:.3em 0 0;max-width:80ch">${esc(v.brief)}</p>${v.ex.map(cpbqEx).join("")}</div>
+     <div class="card" style="margin-top:14px">${v.items.map((it,k)=>`${it.sec?`<h4 class="pbq-sec">${esc(it.sec)}</h4>`:""}<div class="pbq-row" data-k="${k}"><label for="pq${k}">${esc(it.q)}</label><select id="pq${k}"><option value="">Choose…</option>${orderFor(p,it).map(j=>`<option value="${j}"${p.sel&&p.sel[k]===String(j)?" selected":""}>${esc(it.o[j])}</option>`).join("")}</select></div>`).join("")}
+     <div id="epfb" class="fb" hidden></div>
+     <div class="q-actions" style="margin-top:14px"><button class="btn" id="epsub" type="button">${more?"Submit PBQ and continue":"Submit PBQ and finish"}</button>${more?`<button class="btn ghost" id="epflag" type="button">Flag and come back later</button>`:""}</div></div>`;
+    let warned=false;
+    $("#epsub").addEventListener("click",()=>{
+      readSel(p); const empty=p.sel.filter(x=>x==="").length;
+      if(empty&&!warned){ warned=true; $("#epfb").hidden=false; $("#epfb").innerHTML=`<div class="v bad">${empty} item${empty>1?"s are":" is"} still unanswered and will count as wrong. Choose ${empty>1?"them":"it"}, or submit again to move on.</div>`; return; }
+      p.done=true; answered++; next();
+    });
+    const fl=$("#epflag"); if(fl) fl.addEventListener("click",()=>{ readSel(p); queue.push({kind:"pbq",p}); next(); });
+    window.scrollTo(0,0);
+  }
+  const pbqScore=p=>p.v.items.reduce((s,it,k)=>s+(p.sel&&p.sel[k]!==""&&p.sel[k]!=null&&+p.sel[k]===it.a?1:0),0);
   function finish(){
-    if(finished) return; finished=true;
+    if(finished) return; if(cur) readSel(cur); finished=true;
     if(examTimer){ clearInterval(examTimer); examTimer=null; }
     curKeys=null;
-    const per={1:[0,0],2:[0,0],3:[0,0],4:[0,0],5:[0,0]}; let score=0;
-    qs.forEach((q,k)=>{ per[q.d][1]++; if(ans[k]===q.a){ per[q.d][0]++; score++; } });
-    const total=qs.length, p=total?score/total:0;
-    const ds=DOMS.filter(d=>per[d][1]); const weakD=ds.slice().sort((a,b)=>per[a][0]/per[a][1]-per[b][0]/per[b][1])[0];
-    P.exams.push({date:new Date().toLocaleDateString(),score,total,weak:weakD?DOM[weakD]:"—"}); if(P.exams.length>20) P.exams.shift(); save();
+    const per={1:[0,0],2:[0,0],3:[0,0],4:[0,0],5:[0,0]}; let mcScore=0;
+    qs.forEach((q,k)=>{ per[q.d][1]++; if(ans[k]===q.a){ per[q.d][0]++; mcScore++; } });
+    const pr=pbqs.map(p=>({p,score:pbqScore(p),total:p.v.items.length}));
+    const pbqPts=pr.reduce((a,r)=>a+PBQ_WEIGHT*r.score/r.total,0);
+    const score=Math.round((mcScore+pbqPts)*10)/10, total=qs.length+PBQ_WEIGHT*pbqs.length, p=total?score/total:0;
+    const ds=[1,2,3,4,5].filter(d=>per[d][1]); const weakD=ds.slice().sort((a,b)=>per[a][0]/per[a][1]-per[b][0]/per[b][1])[0];
+    if(mode==="student") pr.forEach(r=>{ if(r.p.done||timeUp) (P.pbq[r.p.x.id]=P.pbq[r.p.x.id]||[]).push({score:r.score,total:r.total,at:Date.now(),exam:1}); });
+    P.exams.push({date:new Date().toLocaleDateString(),score,total,full:len!==10,weak:weakD?DOM[weakD]:"All-PBQ exam",pbq:pr.map(r=>({id:r.p.x.id,score:r.score,total:r.total}))}); if(P.exams.length>20) P.exams.shift(); save();
     const missed=qs.map((q,k)=>({q,k})).filter(o=>ans[o.k]!==o.q.a);
     app.innerHTML=`<a class="back" href="#exam">← Back to exam setup</a>
     <div class="mhead"><h2>Result: ${score} / ${total} (${pct(p)}%)</h2></div>
-    ${timeUp?`<div class="callout"><b>Time ran out.</b> Unanswered questions count as wrong.</div>`:""}
-    <div class="callout">${p>=0.8?"On track. Practice-test scores of 80%+ give a reasonable margin.":p>=0.7?"Close. Aim for a steady 80%+ before booking the exam.":"Keep drilling, starting with the weakest domain below."}</div>
-    ${ds.length?`<div class="card"><h3 style="font-size:1.3rem;margin-bottom:8px">Results by domain</h3>
+    ${timeUp?`<div class="callout"><b>Time ran out.</b> PBQs were graded as they stood; unanswered items and questions count as wrong.</div>`:""}
+    <div class="callout">${p>=0.8?"On track. Practice-test scores of 80%+ give a reasonable margin.":p>=0.7?"Close. Aim for a steady 80%+ before booking the exam.":qs.length?"Keep drilling, starting with the weakest area below.":"Keep practicing in Performance-Based Questions, starting with the lowest PBQ below."}</div>
+    <div class="card"><h3 style="font-size:1.3rem;margin-bottom:8px">Performance-based questions <span class="note" style="font-weight:400">(each worth ${PBQ_WEIGHT} questions)</span></h3>
+    ${pr.map(r=>`<div class="dombar"><span>${esc(r.p.x.name)}</span><div class="meter"><i style="width:${pct(r.score/r.total)}%;background:var(--blue)"></i></div><span class="mono">${r.score}/${r.total}</span></div>`).join("")}
+    <p class="note">${qs.length?`Multiple choice: ${mcScore} of ${qs.length}. `:""}PBQs: ${Math.round(pbqPts*10)/10} of ${PBQ_WEIGHT*pbqs.length} points.</p></div>
+    ${ds.length?`<div class="card" style="margin-top:16px"><h3 style="font-size:1.3rem;margin-bottom:8px">Multiple choice by domain</h3>
     ${ds.map(d=>`<div class="dombar d${d}"><span>${DOM[d]}</span><div class="meter"><i style="width:${pct(per[d][0]/per[d][1])}%"></i></div><span class="mono">${per[d][0]}/${per[d][1]}</span></div>`).join("")}
     <p class="note">Weakest: <b>${esc(DOM[weakD])}</b>. ${DOM_ADVICE[weakD]}</p></div>`:""}
     <div class="card" style="margin-top:16px" id="exrev"><h3 style="font-size:1.3rem;margin:0 0 4px">Review your answers</h3>
-      <p class="note" style="margin:0 0 10px">For every question: why the correct answer is right and why each of the others is wrong.</p>
-      <div class="q-actions" style="margin:0 0 6px">${missed.length?`<button class="chipbtn on" type="button" data-rv="missed">Missed (${missed.length})</button>`:""}<button class="chipbtn ${missed.length?"":"on"}" type="button" data-rv="all">All questions (${qs.length})</button></div>
+      <p class="note" style="margin:0 0 10px">Every PBQ item with its answer and explanation, then every multiple-choice question: why the correct answer is right and why each of the others is wrong.</p>
+      <div class="q-actions" style="margin:0 0 6px">${missed.length?`<button class="chipbtn on" type="button" data-rv="missed">Missed (${missed.length})</button>`:""}<button class="chipbtn ${missed.length?"":"on"}" type="button" data-rv="all">All multiple-choice</button></div>
       <div id="exrevlist"></div></div>
     <div class="q-actions"><a class="btn" href="#exam" style="text-decoration:none">Take another</a></div>`;
+    const pbqRev=pr.map(r=>{ const v=r.p.v; return `<details class="miss"><summary><b>${esc(r.p.x.name)}</b> · ${r.score} of ${r.total}</summary>${v.items.map((it,k)=>{ const s=r.p.sel&&r.p.sel[k], ok=s!==""&&s!=null&&+s===it.a;
+      return `<div class="pbq-row ${ok?"ok":"bad"}"><label>${esc(it.q)}</label><div class="pbq-x"><b>${ok?"✓ "+esc(it.o[it.a]):`✗ ${s===""||s==null?"Not answered":"You chose "+esc(it.o[+s])}. Answer: ${esc(it.o[it.a])}`}.</b> ${esc(it.x)}</div></div>`; }).join("")}</details>`; }).join("");
     const rv=which=>{ const list=qs.map((q,k)=>({q,k})).filter(o=>which==="all"||ans[o.k]!==o.q.a);
-      $("#exrevlist").innerHTML=list.map(o=>{ const a=ans[o.k], ok=a===o.q.a;
+      $("#exrevlist").innerHTML=pbqRev+list.map(o=>{ const a=ans[o.k], ok=a===o.q.a;
         return `<div class="miss"><div class="q-meta">${domTag(o.q.d)}<span class="tag" style="color:var(--${ok?"ok":"bad"});border-color:var(--${ok?"ok":"bad"})">${ok?"Correct":a===null?"Not answered":"Missed"}</span><span class="tag">Question ${o.k+1}</span></div><p style="margin:.3em 0"><b>${esc(o.q.q)}</b></p>${logBlock(o.q.h)}${o.q.sk?`<p class="note" style="margin:.2em 0">Skill: ${esc(BP_SKILLS[o.q.sk][0])} ${esc(BP_SKILLS[o.q.sk][1])} · ${esc(BP_STYLE[o.q.st])}</p>`:""}${whyList({options:o.q.o,answer:o.q.a,why:o.q.w&&o.q.w.map(esc),explain:esc(o.q.x),sel:a})}</div>`; }).join("");
       document.querySelectorAll("#exrev [data-rv]").forEach(b=>b.classList.toggle("on",b.dataset.rv===which)); };
     document.querySelectorAll("#exrev [data-rv]").forEach(b=>b.addEventListener("click",()=>rv(b.dataset.rv)));

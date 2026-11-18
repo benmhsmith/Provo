@@ -2,7 +2,7 @@
 
 Provo's study lab for the **CompTIA A+ Core 1 (220-1201)** exam. It drills every exam domain, tracks what you have mastered, and finishes with timed mini-exams weighted to the official domains.
 
-**Current release:** [v1.0.2](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.2) · [All A+ Core 1 releases](https://github.com/benmhsmith/Provo/releases?q=a-plus-core-1) · [What changed](CHANGELOG.md)
+**Current release:** [v1.0.3](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.3) · [All A+ Core 1 releases](https://github.com/benmhsmith/Provo/releases?q=a-plus-core-1) · [What changed](CHANGELOG.md)
 
 A+ certification takes two exams. This tool covers **Core 1 (220-1201)**. [Core 2 (220-1202)](../a-plus-core-2/) has its own tool.
 
@@ -14,7 +14,7 @@ All 14 modules are open:
 - **11 Question Qualifiers:** 50 bench-tech questions, 10 each for FIRST, NEXT, BEST, MOST likely, and MINIMUM, with the A+ reading of each qualifier (safety and data first, smallest option that meets every requirement).
 - **12 Exam-Style Drill:** 189 exam-style questions across all five domains and 27 skills. One question in four in modules 02 to 10 comes from this bank.
 - **13 Performance-Based Questions:** seven simulations, a new variation every run: a help desk queue, two custom builds, a hardware monitor, power protection, printer service, a RAID array, and cabling and powering an access point.
-- **14 Mini-Exams:** 212 questions in the pool (the exam-style bank plus 23 qualifier questions), picked in proportion to the domain weights.
+- **14 Mini-Exams:** 212 questions in the pool (the exam-style bank plus 23 qualifier questions), picked in proportion to the domain weights, with PBQs first. Choose 10, 20, or 40 questions, or every PBQ back to back.
 
 Use it in your browser: https://benmhsmith.github.io/Provo/a-plus-core-1/
 

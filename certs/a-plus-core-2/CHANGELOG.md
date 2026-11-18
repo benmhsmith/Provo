@@ -1,5 +1,12 @@
 # Provo A+ Core 2 changelog
 
+## v1.0.1
+- Mini-exams now include performance-based questions, as on the real exam. The 10-, 20-, and 40-question exams start with 1, 2, or 4 PBQs, spread across the domains, and a new All PBQs option runs every PBQ back to back.
+- Each PBQ is worth 2 multiple-choice questions, scored by the share of items you get right. Time is 1 minute per multiple-choice question plus 6 minutes per PBQ.
+- You can flag a PBQ and come back to it after the multiple choice; your answers are kept. If time runs out, PBQs are graded as they stand.
+- The results page scores each PBQ and reviews every PBQ item with its answer and explanation, before the multiple-choice review.
+- PBQs finished in an exam count toward each PBQ's clears. The All PBQs exam counts toward the Mini-Exams rank, like the 20- and 40-question exams.
+
 ## v1.0.0
 - First full release of Provo A+ Core 2 for CompTIA A+ Core 2 220-1202. All 14 modules are open and cover every objective.
 - **Acronyms:** 101 exam acronyms, asked three ways, with a Type it mode.
