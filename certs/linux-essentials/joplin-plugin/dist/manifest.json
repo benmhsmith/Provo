@@ -1,0 +1,31 @@
+{
+  "manifest_version": 1,
+  "id": "io.github.provo.linuxessentials",
+  "app_min_version": "2.12",
+  "version": "1.0.0",
+  "name": "Provo Linux Essentials",
+  "description": "Provo: exam readiness for LPI Linux Essentials (exam 010, objectives version 2.0). Distributions and open source, the command line, data processing and scripting, system administration, and permissions. To add it, choose Tools > Provo Linux Essentials > Add Provo Linux Essentials note.",
+  "author": "Benjamin Smith",
+  "keywords": [
+    "study",
+    "lpi",
+    "linux",
+    "linux-essentials",
+    "010"
+  ],
+  "categories": [
+    "productivity"
+  ],
+  "platforms": [
+    "desktop",
+    "mobile"
+  ],
+  "homepage_url": "https://github.com/benmhsmith/Provo",
+  "repository_url": "https://github.com/benmhsmith/Provo",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}
