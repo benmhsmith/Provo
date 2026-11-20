@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Choose an exam · Provo</title>
-<meta name="description" content="Provo: study labs for IT certification exams, with CompTIA Network+ N10-009, Security+ SY0-701, CySA+ CS0-004, and A+ Core 1 220-1201 and Core 2 220-1202.">
+<meta name="description" content="Provo: study labs for IT certification exams, with CompTIA Network+ N10-009, Security+ SY0-701, CySA+ CS0-004, A+ Core 1 220-1201 and Core 2 220-1202, and LPI Linux Essentials 010.">
 <link rel="icon" href="../images/icons/provo-icon-small.svg" type="image/svg+xml">
 <link rel="icon" href="../images/icons/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="../images/icons/apple-touch-icon.png">
 <meta property="og:title" content="Choose an exam · Provo">
-<meta property="og:description" content="Practice until you're exam ready: study labs for CompTIA A+ Core 1 and Core 2, Network+, Security+, and CySA+.">
+<meta property="og:description" content="Practice until you're exam ready: study labs for CompTIA A+ Core 1 and Core 2, Network+, Security+, and CySA+, and LPI Linux Essentials.">
 <meta property="og:image" content="https://benmhsmith.github.io/Provo/images/provo-social.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="../fonts.css">
@@ -216,7 +216,7 @@ button.btn{font:inherit;font-weight:700;font-size:.95rem;cursor:pointer}
     <div class="vendors" role="tablist" aria-label="Certification vendors">
       <button class="vendor" role="tab" id="v-comptia" aria-controls="p-comptia" aria-selected="true" type="button"><b>CompTIA</b><small>5 exams</small></button>
       <button class="vendor" role="tab" id="v-cisco" aria-controls="p-cisco" aria-selected="false" tabindex="-1" type="button"><b>Cisco</b><small>Coming later</small></button>
-      <button class="vendor" role="tab" id="v-lpi" aria-controls="p-lpi" aria-selected="false" tabindex="-1" type="button"><b>LPI</b><small>Coming later</small></button>
+      <button class="vendor" role="tab" id="v-lpi" aria-controls="p-lpi" aria-selected="false" tabindex="-1" type="button"><b>LPI</b><small>1 exam</small></button>
       <button class="vendor" role="tab" id="v-ecc" aria-controls="p-ecc" aria-selected="false" tabindex="-1" type="button"><b>EC-Council</b><small>Coming later</small></button>
     </div>
     <p class="step"><b>2</b> Pick an exam</p>
@@ -243,7 +243,13 @@ button.btn{font:inherit;font-weight:700;font-size:.95rem;cursor:pointer}
       </div>
     </div>
     <div class="exams empty" role="tabpanel" id="p-cisco" aria-labelledby="v-cisco" hidden><p><b>Cisco exams are coming later.</b> Want one sooner? <button type="button" class="linkbtn" data-dlg="pvContact">Tell us which</button>.</p></div>
-    <div class="exams empty" role="tabpanel" id="p-lpi" aria-labelledby="v-lpi" hidden><p><b>Linux Professional Institute exams are coming later.</b> Want one sooner? <button type="button" class="linkbtn" data-dlg="pvContact">Tell us which</button>.</p></div>
+    <div class="exams" role="tabpanel" id="p-lpi" aria-labelledby="v-lpi" hidden>
+      <div class="exam">
+        <div class="ex-id"><span class="dot ok" title="Available"></span><div><h3>Linux Essentials <em>010 v2.0</em></h3><p>16 modules · 205 exam-style questions · multiple response and short input · a held-out Readiness Exam</p></div></div>
+        <div class="ex-act"><span class="ver"><a href="https://github.com/benmhsmith/Provo/releases/tag/linux-essentials-v1.0.0">v1.0.0</a></span><a class="btn primary" href="../linux-essentials/">Start</a><a class="btn" href="https://github.com/benmhsmith/Provo/tree/main/certs/linux-essentials#how-to-use-it">Download</a></div>
+      </div>
+      <p style="margin:10px 4px 0;font-size:.82rem;color:var(--muted)">Linux Professional Institute, LPI, and Linux Essentials are trademarks of Linux Professional Institute Inc. Provo is independent and not affiliated with LPI.</p>
+    </div>
     <div class="exams empty" role="tabpanel" id="p-ecc" aria-labelledby="v-ecc" hidden><p><b>EC-Council exams are coming later.</b> Want one sooner? <button type="button" class="linkbtn" data-dlg="pvContact">Tell us which</button>.</p></div>
   </section>
 

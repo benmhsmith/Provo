@@ -17,7 +17,7 @@ The name "Provo" comes from the Italian verb *provare*, "to prove." *Provo* is i
 
 ## Who it's for
 
-Provo is built by an IT instructor for students who are new to IT and working through certifications such as CompTIA A+, Network+, Security+, and CySA+. It gives them a place to practice between classes and a clear, honest picture of when they are ready to book the exam.
+Provo is built by an IT instructor for students who are new to IT and working through certifications such as CompTIA A+, Network+, Security+, and CySA+, and LPI Linux Essentials. It gives them a place to practice between classes and a clear, honest picture of when they are ready to book the exam.
 
 ## What Provo does
 
@@ -39,6 +39,7 @@ Each exam is released on its own, so check the **Current release** column here r
 | CompTIA CySA+ | CS0-004 | **Available** | [v1.0.7](https://github.com/benmhsmith/Provo/releases/tag/cysa-plus-v1.0.7) | [Provo CySA+](certs/cysa-plus/) |
 | CompTIA A+ Core 1 | 220-1201 | **Available** | [v1.0.4](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-1-v1.0.4) | [Provo A+ Core 1](certs/a-plus-core-1/) |
 | CompTIA A+ Core 2 | 220-1202 | **Available** | [v1.0.2](https://github.com/benmhsmith/Provo/releases/tag/a-plus-core-2-v1.0.2) | [Provo A+ Core 2](certs/a-plus-core-2/) |
+| LPI Linux Essentials | 010 (objectives v2.0) | **Available** | [v1.0.0](https://github.com/benmhsmith/Provo/releases/tag/linux-essentials-v1.0.0) | [Provo Linux Essentials](certs/linux-essentials/) |
 
 ## See it in action
 
@@ -84,6 +85,6 @@ Copyright (c) 2026 Benjamin Smith. All rights reserved. Provo is proprietary sof
 
 Versions up to and including v4.0.0 were released under the GNU GPL v3.0 under earlier names. Third-party parts, such as the embedded fonts, keep their own licenses; see [NOTICE.md](NOTICE.md).
 
-CompTIA, Network+, Security+, A+, and CySA+ are trademarks of CompTIA, Inc.
+CompTIA, Network+, Security+, A+, and CySA+ are trademarks of CompTIA, Inc. Linux Professional Institute, LPI, and Linux Essentials are trademarks of Linux Professional Institute Inc. Linux is a registered trademark of Linus Torvalds. Provo is not affiliated with or endorsed by either organization.
 
-**No exam content.** Every Provo question is original, written from CompTIA's publicly available exam objectives. Provo does not use, buy, or accept real exam questions ("brain dumps"), and contributions are checked for this before they are added. Any resemblance to an actual exam question is unintentional. If you believe a question is too close to real exam content, [report it](https://github.com/benmhsmith/Provo/issues/new/choose) and we will review and replace it.
+**No exam content.** Every Provo question is original, written from the vendors' publicly available exam objectives. Provo does not use, buy, or accept real exam questions ("brain dumps"), and contributions are checked for this before they are added. Any resemblance to an actual exam question is unintentional. If you believe a question is too close to real exam content, [report it](https://github.com/benmhsmith/Provo/issues/new/choose) and we will review and replace it.
