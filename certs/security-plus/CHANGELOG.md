@@ -1,5 +1,10 @@
 # Provo Security+ changelog
 
+## v1.5.0
+- 100 new exam-style questions, bringing the Exam-Style Drill to 269. They follow the SY0-701 domain weights (12 general concepts, 22 threats, 18 architecture, 28 operations, 20 program management) and fill the thinnest objectives first: deception, change management, data protection, automation, asset management, third-party risk, and compliance. Every question uses SY0-701's own terms.
+- 17 of the new questions have exhibits, including command injection, a botnet's command channel, a SYN flood, offline hash cracking, a DMARC reject policy, a zero trust enforcement point, and an SLE calculation.
+- Like the rest of the bank, every wrong answer is explained, and the wrong answers are written to match the right one's length, so length gives nothing away.
+
 ## v1.4.7
 - Exhibit questions in the mini-exams now show their exhibit (the log, table, or command output) under the question. Before, only the question text appeared, which made these questions impossible to answer. The Skill Drill, module practice, and exam review were not affected.
 
